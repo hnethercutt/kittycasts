@@ -1,0 +1,31 @@
+:root {
+    @font-face {
+        font-family: 'Minecraft';
+        src: url('/fonts/Minecraft.tff') format('Minecraft');
+    }
+}
+
+*,
+::after,
+::before {
+    box-sizing:border-box;
+}
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(180deg, #acdaff 5.5%, #accfff 19%, #acc1ff 33.5%, #acaeff 47%, #c6acff 61.5%, #e0acff 75.5%, #f2acff 87%, #ffe8ac 96%);
+    height: 1117px;
+    overflow: hidden;
+    text-align: left;
+    font-family: Minecraft;
+    background-attachment: fixed;
+    background-size: auto;
+  }
+
+  
+
+
