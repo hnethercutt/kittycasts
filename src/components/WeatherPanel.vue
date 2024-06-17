@@ -4,7 +4,6 @@ import { toRefs } from 'vue';
 const props = defineProps({
     city: String,
     state: String,
-    localTime: String,
     currentTemp: Number,
     feelsLike: Number,
     condition: String,
@@ -16,78 +15,148 @@ const props = defineProps({
     low: Number
 });
 
-const { city, state, localTime, currentTemp, feelsLike, condition, gust, wind, humidity, forecast, high, low } = toRefs(props);
-
+const { 
+    city, 
+    state, 
+    currentTemp, 
+    feelsLike, 
+    condition, 
+    gust, 
+    wind, 
+    humidity, 
+    forecast, 
+    high, 
+    low } = toRefs(props);
 </script>
 
-
 <template>
-<div class="current">
-    <div class="location">{{ city && state ? city + ', ' + state : city || state }}</div>
-    <div class="local-time">{{ localTime }}</div>
-    <div class="current-temp">{{ currentTemp ? currentTemp + '°' : currentTemp}}</div>
-    <div class="temps">{{ feelsLike ? 'Feels Like: ' + feelsLike + '°' : feelsLike}}
-        {{ low ? 'Low: ' + low + '°': low }}
-        {{ high ? 'High: ' + high + '°': high }}  
+<div class="current-container">
+    <div class="location">
+        {{ city && state ? city + ', ' + state : city || state }}
+    </div>
+    <div class="temp-container">
+        <div class="current-temp">
+            {{ currentTemp ? currentTemp + '°' : currentTemp}}
+        </div>
+        <div class="temp-details">
+            <div class="feels-like">
+                {{ feelsLike ? 'Feels Like: ' + feelsLike + '°' : feelsLike}}
+            </div>
+            <div>{{ low ? 'Low: ' + low + '°': low }}</div>
+            <div>{{ high ? 'High: ' + high + '°': high }}</div>
+        </div>
+    </div>
+    <div class="condition">{{ condition }}</div>
+</div>
+
+<div class="air-container">
+    <div class="air">
+        <div class="wind">
+            {{ wind ? 'Wind: ' + wind + ' mph' : wind }}
+        </div>
+        <div class="gust">
+            {{ gust ? 'Gust: ' + gust + ' mph' : gust }}
+        </div>
+        <div class="humidity">
+            {{ humidity ? 'Humidity: ' + humidity + '%' : humidity }}
+        </div>
     </div>
 
-    <div class="condition">{{ condition }}</div>
-    <div class="air">
-    <div class="wind">{{ wind ? 'Wind: ' + wind + ' mph' : wind }}</div>
-    <div class="gust">{{ gust ? 'Gust: ' + gust + ' mph' : gust }}</div>
-    <div class="humidity">{{ humidity ? 'Humidity: ' + humidity + '%' : humidity }}</div>
-    </div>
+<div class="later"></div>
 </div>
 </template>
 
 <style>
-
-.current {
+.current-container {
     align-items: center;
+    background-color: rgba(252, 230, 188, 0.75);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
+    height:350px;
+    left: 78px;
     position: relative;
-    top: 160px;
-    left: 50px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    background-color: rgba(255, 218, 124, 0.37);
-    width: 372px;
-    height: 455px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    top: 160px;
+    width: 400px;
 }
 
-.air {
-    margin-top: 15px;
+.location {
+    display: flex;
+    font-size: 28px;
+    justify-content: center;
+    margin-top: 27px;
 }
-.temps {
+
+.temp-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    font-size: 15px;
-}
-
-.icon {
-    height: 100px;
-    margin-top: 5px;
-}
-.location {
-    margin-top: 15px;
-    font-size: 25px;
-}
-
-.local-time {
-    font-size: 15px;
+    margin-top: 10px;
 }
 
 .current-temp {
-    margin-top: 20px;
-    font-size: 72px;
     color: rgba(0, 23, 81, 0.72);
+    display: flex;
+    font-size: 72px;
+    justify-content: flex-start;
+    margin-top: 20px;
 }
 
-.condition {
-    margin-top: 15px;
+.temp-details {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    justify-content: space-around;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.feels-like {
     font-size: 20px;
 }
 
+.condition {
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.air-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.air {
+    align-items: center;
+    background-color: rgba(198, 230, 255, 0.9);
+    box-shadow: 
+        0px 4px 4px rgba(0, 0, 0, 0.25), 
+        0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    height: 175px;
+    justify-content: space-around;
+    Left: 78px;
+    position: relative;
+    top: 180px;
+    width: 175px;
+}
+
+.later {
+    align-items: center;
+    background-color: rgba(198, 230, 255, 0.9);
+    box-shadow: 
+        0px 4px 4px rgba(0, 0, 0, 0.25), 
+        0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    height: 175px;
+    justify-content: space-around;
+    Left: 130px;
+    position: relative;
+    top: 180px;
+    width: 175px;
+}
 </style>

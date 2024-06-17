@@ -17,13 +17,12 @@ body {
     padding: 0px;
     width: 100%;
     position: relative;
-    background: linear-gradient(180deg, #acdaff 5.5%, #accfff 19%, #acc1ff 33.5%, #acaeff 47%, #c6acff 61.5%, #e0acff 75.5%, #f2acff 87%, #ffe8ac 96%);
+    background: url(./images/background.png);
     height: 1117px;
-    overflow: hidden;
     text-align: left;
     font-family: Minecraft;
     background-attachment: fixed;
-    background-size: auto;
+    background-size: 100%;
   }
 
   

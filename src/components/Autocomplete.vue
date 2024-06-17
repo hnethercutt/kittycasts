@@ -100,15 +100,15 @@ ul {
 }
 
 .list-0:hover {
-  background-color: rgba(0, 23, 81, 0.30);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .list-1:hover {
-  background-color: rgba(0, 23, 81, 0.30);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .list-2:hover {
-  background-color: rgba(0, 23, 81, 0.30);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .list-items {

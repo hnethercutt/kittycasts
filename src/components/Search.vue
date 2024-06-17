@@ -59,8 +59,8 @@ input {
   display:flex;
   flex-direction: column;
   position: absolute;
-  top: 113px;
-  left: 26px;
+  top: 25px;
+  left: 58.5px;
 }
 
 </style>
