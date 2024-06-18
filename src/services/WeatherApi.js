@@ -56,10 +56,9 @@ export async function fetchWeather(location) {
             gust: data.current.gust_mph,
             wind: data.current.wind_mph,
             humidity: data.current.humidity,
-            forecast: data.forecast.forecastday[0].day.condition.text,
             high: data.forecast.forecastday[0].day.maxtemp_f,
             low: data.forecast.forecastday[0].day.mintemp_f,
-            icon: data.current.condition.icon,
+            icon: data.current.condition.icon
         }   
     } catch (error) {
         console.log('error', error);

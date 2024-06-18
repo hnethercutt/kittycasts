@@ -70,7 +70,7 @@ header {
   position: relative;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.4);
-  height: 1027px;
-  width: 564px;
+  height: 100vh;
+  width: 556px;
 }
 </style>

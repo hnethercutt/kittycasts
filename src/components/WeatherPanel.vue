@@ -10,7 +10,6 @@ const props = defineProps({
     gust: Number,
     wind: Number,
     humidity: Number,
-    forecast: Object,
     high: Number,
     low: Number,
     icon: String
@@ -25,12 +24,11 @@ const {
     gust, 
     wind, 
     humidity, 
-    forecast, 
     high, 
     low,
     icon } = toRefs(props);
 
-watch(condition, async (newCondition) => {
+watch(condition, async () => {
     const iconLocation = icon.value;
     deleteIcon();
     createIcon(iconLocation);
@@ -72,18 +70,16 @@ function createIcon(iconLocation) {
 
 <div class="air-container">
     <div class="air">
-        <div class="wind">
+        <div>
             {{ wind ? 'Wind: ' + wind + ' mph' : wind }}
         </div>
-        <div class="gust">
+        <div>
             {{ gust ? 'Gust: ' + gust + ' mph' : gust }}
         </div>
-        <div class="humidity">
+        <div>
             {{ humidity ? 'Humidity: ' + humidity + '%' : humidity }}
         </div>
     </div>
-
-<div class="later"></div>
 </div>
 </template>
 
@@ -132,14 +128,14 @@ function createIcon(iconLocation) {
     align-items: center;
     display: flex;
     flex-direction: column;
-    font-size: 16px;
+    font-size: 20px;
     justify-content: space-around;
     margin-left: 25px;
     margin-top: 10px;
 }
 
 .feels-like {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .condition {
@@ -160,29 +156,12 @@ function createIcon(iconLocation) {
         0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+    font-size: 24px;
     height: 175px;
     justify-content: space-around;
     Left: 78px;
     position: relative;
     top: 180px;
-    width: 175px;
-}
-
-.later {
-    align-items: center;
-    background-color: rgba(198, 230, 255, 0.9);
-    box-shadow: 
-        0px 4px 4px rgba(0, 0, 0, 0.25), 
-        0px 4px 4px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    height: 175px;
-    justify-content: space-around;
-    Left: 130px;
-    position: relative;
-    top: 180px;
-    width: 175px;
+    width: 400px;
 }
 </style>
