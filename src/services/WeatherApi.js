@@ -58,8 +58,9 @@ export async function fetchWeather(location) {
             humidity: data.current.humidity,
             forecast: data.forecast.forecastday[0].day.condition.text,
             high: data.forecast.forecastday[0].day.maxtemp_f,
-            low: data.forecast.forecastday[0].day.mintemp_f
-        }
+            low: data.forecast.forecastday[0].day.mintemp_f,
+            icon: data.current.condition.icon,
+        }   
     } catch (error) {
         console.log('error', error);
         throw new Error('Failed to fetch weather data');

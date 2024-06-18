@@ -1,5 +1,5 @@
 <script setup>
-import { toRefs } from 'vue';
+import { toRefs, watch } from 'vue';
 
 const props = defineProps({
     city: String,
@@ -12,7 +12,8 @@ const props = defineProps({
     humidity: Number,
     forecast: Object,
     high: Number,
-    low: Number
+    low: Number,
+    icon: String
 });
 
 const { 
@@ -26,7 +27,26 @@ const {
     humidity, 
     forecast, 
     high, 
-    low } = toRefs(props);
+    low,
+    icon } = toRefs(props);
+
+watch(condition, async (newCondition) => {
+    const iconLocation = icon.value;
+    deleteIcon();
+    createIcon(iconLocation);
+})
+
+function deleteIcon() {
+    document.getElementById('icon').textContent = "";
+}
+
+function createIcon(iconLocation) {
+    const iconPic = document.getElementById('icon');
+    const img = document.createElement('img');
+    img.classList.add("weather-icon");
+    img.src = iconLocation;
+    iconPic.appendChild(img);
+}
 </script>
 
 <template>
@@ -42,11 +62,12 @@ const {
             <div class="feels-like">
                 {{ feelsLike ? 'Feels Like: ' + feelsLike + '°' : feelsLike}}
             </div>
-            <div>{{ low ? 'Low: ' + low + '°': low }}</div>
             <div>{{ high ? 'High: ' + high + '°': high }}</div>
+            <div>{{ low ? 'Low: ' + low + '°': low }}</div>
         </div>
     </div>
     <div class="condition">{{ condition }}</div>
+    <div id="icon"></div>
 </div>
 
 <div class="air-container">
@@ -67,6 +88,11 @@ const {
 </template>
 
 <style>
+.weather-icon {
+    width: auto;
+    height: 150px;
+}
+
 .current-container {
     align-items: center;
     background-color: rgba(252, 230, 188, 0.75);
