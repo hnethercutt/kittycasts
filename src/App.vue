@@ -17,6 +17,9 @@ function handleWeatherData(data) {
     <img class="logo" src="/src/assets/images/kitty.png">
     <h1>kittycaSts</h1>
     <h3>Get local forecasts and clothing recommendations from a kitty cat!</h3>
+    <a href="https://github.com/conranh/kittycasts"><img src="/src/assets/images/github-mark.png" class="github-link"></a>
+    <!--Adding this here for whenever I make dark mode
+    <a href="https://github.com/conranh/kittycasts"><img src="/src/assets/images/github-mark-white.png"></a>-->
   </header>
   <div class="container">
   <div class="panel">
@@ -43,6 +46,14 @@ h3 {
   left: 525px;
   margin-top: 40px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.github-link {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .container {
