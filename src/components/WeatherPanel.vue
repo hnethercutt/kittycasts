@@ -15,6 +15,7 @@ const props = defineProps({
     icon: String
 });
 
+// Converts reactive prop object with API returned data so each element can be referenced directly
 const { 
     city, 
     state, 
@@ -28,16 +29,19 @@ const {
     low,
     icon } = toRefs(props);
 
+// When the cities condition is determined, displays the corresponding weather icon
 watch(condition, async () => {
     const iconLocation = icon.value;
     deleteIcon();
     createIcon(iconLocation);
 })
 
+// Ensures icon from any previous searches is removed
 function deleteIcon() {
     document.getElementById('icon').textContent = "";
 }
 
+// Adds an img element with the correct icon img source
 function createIcon(iconLocation) {
     const iconPic = document.getElementById('icon');
     const img = document.createElement('img');
