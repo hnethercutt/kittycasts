@@ -15,7 +15,7 @@ function handleWeatherData(data) {
 <template>
   <header>
     <img class="logo" src="/src/assets/images/kitty.png">
-    <h1>KittyCaSts</h1>
+    <h1>kittycaSts</h1>
     <h3>Get local forecasts and clothing recommendations from a kitty cat!</h3>
   </header>
   <div class="container">
@@ -71,6 +71,6 @@ header {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.4);
   height: 100vh;
-  width: 556px;
+  min-width: 556px;
 }
 </style>
