@@ -19,7 +19,8 @@ onMounted(() => {
 </script>
 
 <template>
-    <div id="textBox" class="text-box"></div>
+    <div id="textBox" class="text-box">
+    </div>
 </template>
 
 <style>
@@ -31,10 +32,12 @@ onMounted(() => {
             0px 4px 4px rgba(0, 0, 0, 0.25), 
             0px 4px 4px rgba(0, 0, 0, 0.25) inset;
         color: #fff;
+        display: flex;
+        justify-content: center;
         font-size: 16px;
         height: 100px;
+        align-items: center;
         margin-top: 20px;
-        text-align: center;
         width: 500px;
     }
 </style>
