@@ -1,28 +1,23 @@
 :root {
-    @font-face {
-        font-family: 'Minecraft';
-        src: url('/fonts/Minecraft.tff') format('Minecraft');
-    }
+  @font-face {
+    font-family: "Minecraft";
+    src: url("/fonts/Minecraft.tff") format("Minecraft");
+  }
 }
 
 *,
 ::after,
 ::before {
-    box-sizing:border-box;
+  box-sizing: border-box;
 }
 
-
 body {
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    background: url(./images/background.png);
-    text-align: left;
-    font-family: Minecraft;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-
-  
-
-
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  background: url(./images/background.png);
+  text-align: left;
+  font-family: Minecraft;
+  background-attachment: fixed;
+  background-size: cover;
+}

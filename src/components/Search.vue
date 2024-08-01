@@ -1,7 +1,7 @@
 <script setup>
-import { ref, watch, getCurrentInstance } from 'vue';
-import { fetchWeather } from '../services/WeatherApi.js';
-import Autocomplete from './Autocomplete.vue';
+import { ref, watch, getCurrentInstance } from "vue";
+import { fetchWeather } from "../services/WeatherApi.js";
+import Autocomplete from "./Autocomplete.vue";
 
 const selectedCity = ref(null);
 const { emit } = getCurrentInstance();
@@ -10,19 +10,24 @@ const { emit } = getCurrentInstance();
 watch(selectedCity, async (city) => {
   if (city) {
     const weatherData = await fetchWeather(city);
-    emit('weather-data', weatherData);
+    emit("weather-data", weatherData);
   }
 });
 </script>
 
 <template>
-<div class="search-container">
-<form id="searchBar" class="search-bar" autocomplete="off">
-      <input id="input" v-model="input" type="text" placeholder="Search for your city/state or zip code">
+  <div class="search-container">
+    <form id="searchBar" class="search-bar" autocomplete="off">
+      <input
+        id="input"
+        v-model="input"
+        type="text"
+        placeholder="Search for your city/state or zip code"
+      />
       <button id="searchButton" class="search-button" type="submit"></button>
-</form>
-<Autocomplete @city-selected="selectedCity = $event"/>
-</div>
+    </form>
+    <Autocomplete @city-selected="selectedCity = $event" />
+  </div>
 </template>
 
 <style>
@@ -47,7 +52,7 @@ input {
 
 .search-button {
   background-color: transparent;
-  background-image: url('/src/assets/images/search.png');
+  background-image: url("/src/assets/images/search.png");
   background-position: center;
   background-repeat: no-repeat;
   border: none;
@@ -56,11 +61,10 @@ input {
 }
 
 .search-container {
-  display:flex;
+  display: flex;
   flex-direction: column;
   position: absolute;
   top: 25px;
   left: 58.5px;
 }
-
 </style>

@@ -1,33 +1,32 @@
 <script setup>
-import { fetchCity, fetchWeather } from '../services/WeatherApi.js';
-import { onMounted, onUnmounted, ref, getCurrentInstance } from 'vue';
-import Search from './Search.vue';
+import { fetchCity, fetchWeather } from "../services/WeatherApi.js";
+import { onMounted, onUnmounted, ref, getCurrentInstance } from "vue";
+import Search from "./Search.vue";
 
 // Timer so autocomplete doesn't show one character at a time
 let timerID;
 
 // Holds city to send to API
-const location = ref("")
+const location = ref("");
 
 // Ensures location data is current
 const { emit } = getCurrentInstance();
 
 onMounted(() => {
   if (input) {
-    input.addEventListener('keyup', handleKeyup);
+    input.addEventListener("keyup", handleKeyup);
   }
 
   const searchButton = document.getElementById("searchButton");
-  
+
   // Adds functionality to the search button
   searchButton.addEventListener("click", (event) => {
-  event.preventDefault();
+    event.preventDefault();
 
-  location.value = document.getElementById("input").value;
-  emit('city-selected', location.value);
-  })
-  
-})
+    location.value = document.getElementById("input").value;
+    emit("city-selected", location.value);
+  });
+});
 
 // Begins autocomplete
 function handleKeyup(event) {
@@ -35,10 +34,9 @@ function handleKeyup(event) {
   timerID = setTimeout(() => {
     fetchCity(event.target.value).then((cityData) => {
       displaySuggestions(cityData);
-    })
+    });
   }, 250);
 }
-
 
 function displaySuggestions(data) {
   removeItems();
@@ -50,7 +48,8 @@ function displaySuggestions(data) {
   if (data) {
     // API returns an array of locations, the first 3 are inserted as list items/suggestions
     for (var i = 0; i < 3; i++) {
-      listItem.innerHTML += `<li class = list-${i} id =${i}>${data[i].name + ", " + data[i].region}</li>`;
+      listItem.innerHTML += `<li class = list-${i} id =${i}>${
+        data[i].name + ", " + data[i].region}</li>`;
       document.querySelector(".list").appendChild(listItem);
 
       let items = document.querySelectorAll(".list-items");
@@ -61,11 +60,11 @@ function displaySuggestions(data) {
           var index = event.target.id;
           location.value = data[index].name + ", " + data[index].region;
           console.log(location.value);
-          emit('city-selected', location.value);
+          emit("city-selected", location.value);
 
           removeItems();
-        })
-      })
+        });
+      });
     }
   }
 }
