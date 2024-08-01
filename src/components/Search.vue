@@ -35,6 +35,7 @@ watch(selectedCity, async (city) => {
   display: flex;
   border-color: auto;
   border-width: 3px;
+  border-radius: 10px 10px 10px 10px;
   border-style: solid;
   width: 445px;
   height: 45px;
