@@ -53,7 +53,7 @@ onMounted(() => {
         />
         <img id="teeth" class="teeth" src="/src/assets/images/teeth/two.png" />
       </div>
-      <CatText v-bind="weatherData" />
+      <CatText />
     </div>
   </div>
 
@@ -63,13 +63,13 @@ onMounted(() => {
       <input id="fur-tab" type="radio" name="customize" checked="checked" />
       <label for="fur-tab">Fur</label>
       <div class="options">
-        <button class="fur-button" id="black">Black</button>
-        <button class="fur-button" id="brown-tabby">Brown tabby</button>
-        <button class="fur-button" id="grey-tabby">Grey tabby</button>
-        <button class="fur-button" id="orange-tabby">Orange tabby</button>
-        <button class="fur-button" id="orange-white">Orange/White</button>
-        <button class="fur-button" id="tuxedo">Tuxedo</button>
-        <button class="fur-button" id="white">White</button>
+        <button class="fur-button" id="black"></button>
+        <button class="fur-button" id="brown-tabby"></button>
+        <button class="fur-button" id="grey-tabby"></button>
+        <button class="fur-button" id="orange-tabby"></button>
+        <button class="fur-button" id="orange-white"></button>
+        <button class="fur-button" id="tuxedo"></button>
+        <button class="fur-button" id="white"></button>
       </div>
       <input id="eyes-tab" type="radio" name="customize" />
       <label for="eyes-tab">Eyes</label>
@@ -87,14 +87,14 @@ onMounted(() => {
       <input id="teeth-tab" type="radio" name="customize" />
       <label for="teeth-tab">Teeth</label>
       <div class="options">
-        <button class="teeth-button" id="one">One tooth</button>
-        <button class="teeth-button" id="two">Two teeth</button>
+        <button class="teeth-button" id="one"></button>
+        <button class="teeth-button" id="two"></button>
       </div>
       <input id="blush-tab" type="radio" name="customize" />
       <label for="blush-tab">Blush</label>
       <div class="options">
-        <button class="blush-button" id="blush1">Blush 1</button>
-        <button class="blush-button" id="blush2">Blush 2</button>
+        <button class="blush-button" id="blush1"></button>
+        <button class="blush-button" id="blush2"></button>
       </div>
       <div class="line"></div>
     </div>
@@ -172,14 +172,16 @@ onMounted(() => {
 .eyes-button,
 .teeth-button,
 .blush-button {
-  height: 125px;
-  width: 125px;
+  height: 123px;
+  width: 123px;
   background-color: transparent;
   background-position: center;
   background-size: 300px;
-  border: none;
+  border-color: transparent;
+  border-radius: 20px 20px 20px 20px;
   cursor: pointer;
 }
+
 .fur-button:hover,
 .eyes-button:hover,
 .teeth-button:hover,
@@ -214,12 +216,74 @@ onMounted(() => {
 #yellow {
   background-image: url("/src/assets/images/eyes/yellow.png");
 }
+#one {
+  background-image: url("/src/assets/images/teeth/one.png");
+  background-size: 800px;
+}
+
+#two {
+  background-image: url("/src/assets/images/teeth/two.png");
+  background-size: 800px;
+}
+
+#black {
+  background-image: url("/src/assets/images/fur/black.png"),
+    url("/src/assets/images/eyes/yellow.png");
+  background-size: cover;
+}
+
+#brown-tabby {
+  background-image: url("/src/assets/images/fur/brown-tabby.png"),
+    url("/src/assets/images/eyes/aqua.png");
+  background-size: cover;
+}
+
+#grey-tabby {
+  background-image: url("/src/assets/images/fur/grey-tabby.png"),
+    url("/src/assets/images/eyes/pink.png");
+  background-size: cover;
+}
+
+#orange-tabby {
+  background-image: url("/src/assets/images/fur/orange-tabby.png"),
+    url("/src/assets/images/eyes/green.png");
+  background-size: cover;
+}
+
+#orange-white {
+  background-image: url("/src/assets/images/fur/orange-white.png"),
+    url("/src/assets/images/eyes/blue.png");
+  background-size: cover;
+}
+
+#tuxedo {
+  background-image: url("/src/assets/images/fur/tuxedo.png"),
+    url("/src/assets/images/eyes/orange.png");
+  background-size: cover;
+}
+
+#white {
+  background-image: url("/src/assets/images/fur/white.png"),
+    url("/src/assets/images/eyes/grey.png");
+  background-size: cover;
+}
+
+#blush1 {
+  background-image: url("/src/assets/images/blush/blush1.png");
+  background-size: 200px;
+}
+
+#blush2 {
+  background-image: url("/src/assets/images/blush/blush2.png");
+  background-size: 200px;
+}
 
 .customize-border {
   height: 380px;
   width: 510px;
   position: absolute;
   border: 3px solid black;
+  border-radius: 0px 0px 20px 20px;
   border-top: none;
   top: 333px;
   left: 1256px;
@@ -274,6 +338,7 @@ input[type="radio"]:checked + label + .options {
   );
   box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.25),
     0px 4px 4px -4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 20px 20px 20px;
   height: 420px;
   margin-left: 100px;
   margin-top: 200px;
