@@ -49,7 +49,7 @@ onMounted(() => {
             <img id="blush" class="blush" src="/src/assets/images/blush/blush1.png">
             <img id="teeth" class="teeth" src="/src/assets/images/teeth/two.png">
             </div>
-            <CatText/>
+            <CatText v-bind="weatherData"/>
         </div>
     </div>
 
