@@ -27,7 +27,7 @@ function handleWeatherData(data) {
       <Search @weather-data="handleWeatherData" />
       <WeatherPanel v-bind="weatherData" />
     </div>
-    <CatBox />
+    <CatBox v-bind="weatherData"/>
   </div>
 </template>
 
@@ -84,4 +84,5 @@ header {
   height: 100vh;
   min-width: 556px;
 }
+
 </style>

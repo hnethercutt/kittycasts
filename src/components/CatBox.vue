@@ -1,7 +1,14 @@
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, toRefs } from "vue";
 import CatText from "./CatText.vue";
 
+const props = defineProps({
+  condition: String
+});
+
+const {
+  condition
+} = toRefs(props);
 onMounted(() => {
   let btns = document.querySelectorAll("button");
   const fur = document.getElementById("furColor");
@@ -53,7 +60,7 @@ onMounted(() => {
         />
         <img id="teeth" class="teeth" src="/src/assets/images/teeth/two.png" />
       </div>
-      <CatText />
+      <CatText :condition="condition"/>
     </div>
   </div>
 

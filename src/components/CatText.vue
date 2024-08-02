@@ -1,23 +1,30 @@
 <script setup>
-import { onMounted } from "vue";
+import { watch, toRefs } from "vue";
 
-onMounted(() => {
-  const txt = "Testing testing";
+const props = defineProps({
+  condition: String
+});
+
+const {
+  condition
+} = toRefs(props);
+
+watch(() => props.condition, (newValue) => {
   let start = 0;
+  const txt = condition.value;
 
-  // Creates the typewrite effect in the text box when the page loads
   const catText = setInterval(function () {
-    document.getElementById("textBox").innerHTML += txt.charAt(start);
+    document.getElementById('textBox').innerHTML += txt.charAt(start);
     if (++start == txt.length) {
       clearInterval(catText);
       $("#textBox").trigger(
         $.Event("keypress", {
-          keyCode: 13,
+          keyCode: 13.
         })
       );
     }
   }, 100);
-});
+})
 </script>
 
 <template>
