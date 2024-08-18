@@ -109,10 +109,15 @@ onMounted(() => {
       </div>
       <div class="line"></div>
     </div>
+    <p>&#169; 2024 Hannah Nethercutt</p>
   </div>
 </template>
 
 <style>
+p {
+  margin-top: 8%;
+}
+
 .teeth {
   height: 500px;
   position: absolute;
