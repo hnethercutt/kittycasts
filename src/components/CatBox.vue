@@ -322,7 +322,7 @@ p {
   position: absolute;
   border: 3px solid black;
   border-top: none;
-  top: 281px;
+  top: 287px;
   right: 107px;
   box-sizing: border-box;
   pointer-events: none;
