@@ -15,7 +15,7 @@ function handleWeatherData(data) {
   <header>
     <img class="logo" src="/src/assets/images/kitty.png" />
     <h1>kittycaSts</h1>
-    <h3>Get local forecasts and clothing recommendations from a kitty cat!</h3>
+    <h3>Get local forecasts from a kitty cat!</h3>
     <a href="https://github.com/conranh/kittycasts"
       ><img src="/src/assets/images/github-mark.png" class="github-link"
     /></a>
