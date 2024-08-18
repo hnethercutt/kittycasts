@@ -62,6 +62,7 @@ onMounted(() => {
       </div>
       <CatText :condition="condition"/>
     </div>
+    <p>&#169; 2024 Hannah Nethercutt</p>
   </div>
 
   <div class="customize-container">
@@ -109,13 +110,13 @@ onMounted(() => {
       </div>
       <div class="line"></div>
     </div>
-    <p>&#169; 2024 Hannah Nethercutt</p>
   </div>
 </template>
 
 <style>
 p {
-  margin-top: 8%;
+  margin-left: 50px;
+  font-size: 18px;
 }
 
 .teeth {
@@ -143,7 +144,7 @@ p {
 .window-container {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  justify-content: center;
 }
 
 .window-top {
@@ -186,8 +187,8 @@ p {
 .eyes-button,
 .teeth-button,
 .blush-button {
-  height: 123px;
-  width: 123px;
+  height: 120px;
+  width: 125px;
   background-color: transparent;
   background-position: center;
   background-size: 300px;
@@ -316,19 +317,19 @@ p {
 }
 
 .customize-border {
-  height: 380px;
+  height: 375px;
   width: 400px;
   position: absolute;
   border: 3px solid black;
   border-top: none;
-  top: 283px;
-  left: 1256px;
+  top: 281px;
+  right: 107px;
   box-sizing: border-box;
   pointer-events: none;
 }
 .line {
   border-bottom: 3px solid black;
-  width: 100px;
+  width: 135px;
 }
 
 .customize {
@@ -374,9 +375,9 @@ input[type="radio"]:checked + label + .options {
   );
   box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.25),
     0px 4px 4px -4px rgba(0, 0, 0, 0.25);
-  height: 420px;
+  height: 418px;
   margin-left: 100px;
-  margin-top: 150px;
+  margin-top: 152px;
   padding: 10px;
   width: 400px;
 }

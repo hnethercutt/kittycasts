@@ -65,6 +65,6 @@ input {
   flex-direction: column;
   position: absolute;
   top: 25px;
-  left: 58.5px;
+  left: 25px;
 }
 </style>

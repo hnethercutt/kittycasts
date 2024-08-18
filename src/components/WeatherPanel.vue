@@ -91,7 +91,7 @@ function createIcon(iconLocation) {
 <style>
 .weather-icon {
   width: auto;
-  height: 125px;
+  height: 110px;
 }
 
 .current-container {
@@ -101,7 +101,7 @@ function createIcon(iconLocation) {
   display: flex;
   flex-direction: column;
   height: 350px;
-  left: 78px;
+  left: 50px;
   position: relative;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   top: 160px;
@@ -110,42 +110,41 @@ function createIcon(iconLocation) {
 
 .location {
   display: flex;
-  font-size: 28px;
+  font-size: 36px;
   justify-content: center;
-  margin-top: 27px;
+  margin-top: 15px;
 }
 
 .temp-container {
   display: flex;
   flex-direction: row;
-  margin-top: 10px;
 }
 
 .current-temp {
   color: rgba(0, 23, 81, 0.72);
   display: flex;
-  font-size: 72px;
+  font-size: 84px;
+  margin-top: 10px;
   justify-content: flex-start;
-  margin-top: 20px;
 }
 
 .temp-details {
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-size: 20px;
+  font-size: 24px;
   justify-content: space-around;
   margin-left: 25px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .feels-like {
-  font-size: 22px;
+  font-size: 28px;
 }
 
 .condition {
-  font-size: 24px;
-  margin-top: 15px;
+  font-size: 34px;
+  margin-top: 20px;
 }
 
 .air-container {
@@ -159,10 +158,10 @@ function createIcon(iconLocation) {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  font-size: 24px;
+  font-size: 28px;
   height: 175px;
   justify-content: space-around;
-  left: 78px;
+  left: 50px;
   position: relative;
   top: 180px;
   width: 400px;

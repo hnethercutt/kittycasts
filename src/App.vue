@@ -33,18 +33,19 @@ function handleWeatherData(data) {
 
 <style>
 h1 {
-  position: absolute;
+  position: fixed;
   left: 170px;
   font-weight: 500;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 68px;
-  margin-top: 15px;
+  margin-top: 0px;
 }
 
 h3 {
-  position: absolute;
-  left: 525px;
-  margin-top: 40px;
+  margin: 0;
+  padding: 25px;
+  text-align: center;
+  font-size: 34px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -82,7 +83,7 @@ header {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.4);
   height: 90vh;
-  width: 556px;
+  width: 500px;
 }
 
 </style>
