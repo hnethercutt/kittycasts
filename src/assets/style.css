@@ -1,10 +1,5 @@
-:root {
-  @font-face {
-    font-family: "Minecraft";
-    src: url("/fonts/Minecraft.tff") format("Minecraft");
-  }
-}
-
+/* @import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Nanum+Gothic+Coding:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Share+Tech+Mono&display=swap');
 *,
 ::after,
 ::before {
@@ -16,8 +11,9 @@ body {
   padding: 0px;
   position: relative;
   background: url(./images/background.png);
+  font-family: "Chela One", system-ui;
+  font-weight: 400;
   text-align: left;
-  font-family: Minecraft;
   background-attachment: fixed;
   background-size: cover;
 }
