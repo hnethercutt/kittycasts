@@ -106,8 +106,6 @@ function createIcon(iconLocation) {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   top: 160px;
   width: 400px;
-  border: 5px solid rgba(255, 255, 255, 0);
-  border-radius: 20px 20px 20px 20px;
 }
 
 .location {
@@ -168,7 +166,5 @@ function createIcon(iconLocation) {
   position: relative;
   top: 180px;
   width: 400px;
-  border: 5px solid rgba(255, 255, 255, 0);
-  border-radius: 20px 20px 20px 20px;
 }
 </style>
