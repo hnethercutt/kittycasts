@@ -138,7 +138,7 @@ onMounted(() => {
 .window-container {
   display: flex;
   flex-direction: column;
-  margin-top: 75px;
+  margin-top: 50px;
 }
 
 .window-top {
@@ -164,7 +164,7 @@ onMounted(() => {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  height: 650px;
+  height: 600px;
   justify-content: center;
   gap: 250px;
   left: 50px;
@@ -312,24 +312,24 @@ onMounted(() => {
 
 .customize-border {
   height: 380px;
-  width: 510px;
+  width: 400px;
   position: absolute;
   border: 3px solid black;
   border-top: none;
-  top: 333px;
+  top: 283px;
   left: 1256px;
   box-sizing: border-box;
   pointer-events: none;
 }
 .line {
   border-bottom: 3px solid black;
-  width: 210px;
+  width: 100px;
 }
 
 .customize {
   display: flex;
   flex-wrap: wrap;
-  width: 600px;
+  width: 400px;
   margin: -10px;
 }
 
@@ -371,8 +371,8 @@ input[type="radio"]:checked + label + .options {
     0px 4px 4px -4px rgba(0, 0, 0, 0.25);
   height: 420px;
   margin-left: 100px;
-  margin-top: 200px;
+  margin-top: 150px;
   padding: 10px;
-  width: 510px;
+  width: 400px;
 }
 </style>
