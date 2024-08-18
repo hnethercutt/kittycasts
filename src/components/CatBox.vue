@@ -77,6 +77,8 @@ onMounted(() => {
         <button class="fur-button" id="orange-white"></button>
         <button class="fur-button" id="tuxedo"></button>
         <button class="fur-button" id="white"></button>
+        <button class="fur-button" id="siamese"></button>
+        <button class="fur-button" id="calico"></button>
       </div>
       <input id="eyes-tab" type="radio" name="customize" />
       <label for="eyes-tab">Eyes</label>
@@ -94,12 +96,14 @@ onMounted(() => {
       <input id="teeth-tab" type="radio" name="customize" />
       <label for="teeth-tab">Teeth</label>
       <div class="options">
+        <button class="teeth-button" id="teeth-none"></button>
         <button class="teeth-button" id="one"></button>
         <button class="teeth-button" id="two"></button>
       </div>
       <input id="blush-tab" type="radio" name="customize" />
       <label for="blush-tab">Blush</label>
       <div class="options">
+        <button class="blush-button" id="blush-none"></button>
         <button class="blush-button" id="blush1"></button>
         <button class="blush-button" id="blush2"></button>
       </div>
@@ -146,7 +150,6 @@ onMounted(() => {
     rgba(206, 125, 255, 0.9)
   );
   border-left: 5px solid rgba(0, 0, 0, 0.75);
-  border-radius: 20px 20px 0px 0px;
   border-right: 5px solid rgba(0, 0, 0, 0.75);
   border-top: 5px solid rgba(0, 0, 0, 0.75);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -158,7 +161,6 @@ onMounted(() => {
 .cat-box {
   align-items: center;
   border: 5px solid rgba(0, 0, 0, 0.75);
-  border-radius: 0px 0px 20px 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
@@ -223,6 +225,12 @@ onMounted(() => {
 #yellow {
   background-image: url("/src/assets/images/eyes/yellow.png");
 }
+
+#teeth-none {
+  background-image: url("/src/assets/images/teeth/teeth-none.png");
+  background-size: 800px;
+}
+
 #one {
   background-image: url("/src/assets/images/teeth/one.png");
   background-size: 800px;
@@ -245,6 +253,12 @@ onMounted(() => {
   background-size: cover;
 }
 
+#calico {
+  background-image: url("/src/assets/images/fur/calico.png"),
+    url("/src/assets/images/eyes/orange.png");
+  background-size: cover;
+}
+
 #grey-tabby {
   background-image: url("/src/assets/images/fur/grey-tabby.png"),
     url("/src/assets/images/eyes/pink.png");
@@ -263,6 +277,12 @@ onMounted(() => {
   background-size: cover;
 }
 
+#siamese {
+  background-image: url("/src/assets/images/fur/siamese.png"),
+    url("/src/assets/images/eyes/orange.png");
+  background-size: cover;
+}
+
 #tuxedo {
   background-image: url("/src/assets/images/fur/tuxedo.png"),
     url("/src/assets/images/eyes/orange.png");
@@ -273,6 +293,11 @@ onMounted(() => {
   background-image: url("/src/assets/images/fur/white.png"),
     url("/src/assets/images/eyes/grey.png");
   background-size: cover;
+}
+
+#blush-none {
+  background-image: url("/src/assets/images/blush/blush-none.png");
+  background-size: 200px;
 }
 
 #blush1 {
@@ -290,7 +315,6 @@ onMounted(() => {
   width: 510px;
   position: absolute;
   border: 3px solid black;
-  border-radius: 0px 0px 20px 20px;
   border-top: none;
   top: 333px;
   left: 1256px;
@@ -345,7 +369,6 @@ input[type="radio"]:checked + label + .options {
   );
   box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.25),
     0px 4px 4px -4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px 20px 20px 20px;
   height: 420px;
   margin-left: 100px;
   margin-top: 200px;
