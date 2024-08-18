@@ -74,15 +74,15 @@ header {
   margin: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: rgba(255, 255, 255, 0.21);
-  height: 90px;
+  height: 10vh;
 }
 
 .panel {
   position: relative;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.4);
-  height: 100vh;
-  min-width: 556px;
+  height: 90vh;
+  width: 556px;
 }
 
 </style>
