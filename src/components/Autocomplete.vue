@@ -99,20 +99,20 @@ ul {
 }
 
 .list-0:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(198, 230, 255, 0.4);
 }
 
 .list-1:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(198, 230, 255, 0.4);
 }
 
 .list-2:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(198, 230, 255, 0.4);
 }
 
 .list-items {
-  padding: 2px;
+  margin-top: -10px;
   cursor: pointer;
-  font-size: large;
+  font-size: larger;
 }
 </style>
