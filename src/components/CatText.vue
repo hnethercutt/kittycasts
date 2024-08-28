@@ -168,7 +168,6 @@ watch(
   color: #fff;
   display: flex;
   justify-content: center;
-  /* font-family: "Nanum Gothic Coding", monospace; */
   font-family: "Share Tech Mono", monospace;
   font-weight: 400;
   font-size: 18px;
