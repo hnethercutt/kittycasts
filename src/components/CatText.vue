@@ -7,7 +7,7 @@ const props = defineProps({
 
 const { condition } = toRefs(props);
 
-// Determines the text box output based on the weather condition
+// Determines the text box output based on the weather condition and displays it
 watch(
   () => props.condition,
   (newValue) => {
