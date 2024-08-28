@@ -7,6 +7,7 @@ const props = defineProps({
 
 const { condition } = toRefs(props);
 
+// Determines the text box output based on the weather condition
 watch(
   () => props.condition,
   (newValue) => {
@@ -14,6 +15,7 @@ watch(
     let txt = condition.value;
     document.getElementById("textBox").innerHTML = "";
 
+    // Using very basic text for now just to make sure it works, will update these later
     switch (txt) {
       case "Light rain shower":
       case "Light rain":
@@ -138,6 +140,7 @@ watch(
         break;
     }
 
+    // Creates the typewriter effect for the text display
     const catText = setInterval(function () {
       document.getElementById("textBox").innerHTML += txt.charAt(start);
       if (++start == txt.length) {
