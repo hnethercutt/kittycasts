@@ -1,5 +1,5 @@
 const url = "https://api.weatherapi.com/v1/";
-const key = "895b5ae65b7041f88d030836242802";
+//const key = "your API key";
 
 /**
  * Fetches city information based on the provided input
