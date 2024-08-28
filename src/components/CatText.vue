@@ -23,7 +23,6 @@ watch(
       case "Patchy light rain":
       case "Patchy light drizzle":
         txt = "It's a little rainy";
-        console.log(txt);
         break;
 
       case "Patchy rain possible":
