@@ -322,8 +322,8 @@ p {
   position: absolute;
   border: 3px solid black;
   border-top: none;
-  top: 287px;
-  right: 107px;
+  top: 45px;
+  right: 0.2px;
   box-sizing: border-box;
   pointer-events: none;
 }
@@ -380,5 +380,6 @@ input[type="radio"]:checked + label + .options {
   margin-top: 152px;
   padding: 10px;
   width: 400px;
+  position: relative;
 }
 </style>
