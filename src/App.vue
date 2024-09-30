@@ -48,7 +48,6 @@ h1 {
   top: 20px;
 }
 
-/**/
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
