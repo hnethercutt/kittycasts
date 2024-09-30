@@ -41,7 +41,6 @@ watch(selectedCity, async (city) => {
 }
 
 input {
-  font-family: Minecraft;
   outline: none;
   border: none;
   padding: 10px;
