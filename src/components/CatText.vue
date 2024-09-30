@@ -156,7 +156,7 @@ watch(
 </script>
 
 <template>
-  <div id="textBox" class="text-box"></div>
+  <div id="textBox" class="text-box">Meow! Search for your city and I will give you the weather. Customize me if you'd like!</div>
 </template>
 
 <style>
@@ -175,5 +175,6 @@ watch(
   align-items: center;
   margin-top: 20px;
   width: 500px;
+  text-align: center;
 }
 </style>

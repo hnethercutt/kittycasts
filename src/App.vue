@@ -15,7 +15,6 @@ function handleWeatherData(data) {
   <header>
     <img class="logo" src="/src/assets/images/kitty.png" />
     <h1>kittycaSts</h1>
-    <h3>Get local forecasts from a kitty cat!</h3>
     <a href="https://github.com/conranh/kittycasts"
       ><img src="/src/assets/images/github-mark.png" class="github-link"
     /></a>
@@ -41,14 +40,6 @@ h1 {
   margin-top: 0px;
 }
 
-h3 {
-  margin: 0;
-  padding: 25px;
-  text-align: center;
-  font-size: 34px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .github-link {
   width: 50px;
   height: auto;
@@ -58,8 +49,8 @@ h3 {
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
 }
 
 .logo {
