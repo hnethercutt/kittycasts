@@ -31,6 +31,8 @@ watch(selectedCity, async (city) => {
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Share+Tech+Mono&display=swap');
+
 .search-bar {
   display: flex;
   border-color: auto;
@@ -47,6 +49,7 @@ input {
   font-size: 20px;
   width: 420px;
   background-color: transparent;
+  font-family: "Chela One", system-ui;
 }
 
 .search-button {
