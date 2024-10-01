@@ -382,4 +382,73 @@ input[type="radio"]:checked + label + .options {
   width: 400px;
   position: relative;
 }
+
+@media only screen and (max-width: 430px) {
+  .cat-box {
+    height: 290px;
+    width: 350px;
+    position: absolute;
+    left: 40px;
+    top: 260px;
+    gap: 150px;
+  }
+
+  .window-top {
+    width: 350px;
+    position: absolute;
+    height: 25px;
+    left: 40px;
+    top: 235px;
+  }
+  .fur-color {
+    height: 275px;
+  }
+
+  .eye-color {
+    height: 275px;
+  }
+
+  .teeth {
+    height: 275px;
+  }
+
+  .blush {
+    height: 275px;
+  }
+
+  .cat {
+    margin-top: 75px;
+  }
+
+  .customize-container {
+    position: absolute;
+    top: 575px;
+    width: 400px;
+    margin-left: 15px;
+    height: 182px;
+    background-image: linear-gradient(
+    transparent 25%,
+    rgba(126, 197, 255, 0.9) 11%
+  );
+  }
+
+  .customize-border {
+    height: 140px;
+    width: 399.5px;
+  }
+
+  .options {
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  .fur-button,
+.eyes-button,
+.teeth-button,
+.blush-button {
+  display:inline-block;
+  margin-bottom: 15px;
+}
+
+}
 </style>

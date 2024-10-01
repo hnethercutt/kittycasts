@@ -56,8 +56,9 @@ h1 {
 .logo {
   position: absolute;
   left: 17px;
-  width: 140px;
+  width: auto;
   height: 90px;
+  margin-top: 4px;
   object-fit: cover;
 }
 
@@ -77,4 +78,24 @@ header {
   width: 500px;
 }
 
+@media only screen and (max-width: 430px)
+{
+  h1 {
+    font-size: 64px;
+    top: 10px;
+  }
+
+  .logo {
+    height: 85px;
+  }
+
+  .github-link {
+    display: none;
+  }
+
+  .panel {
+    background-color: none;
+    box-shadow: none;
+  }
+}
 </style>

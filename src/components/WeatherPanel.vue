@@ -53,6 +53,7 @@ function createIcon(iconLocation) {
 </script>
 
 <template>
+  <div class="weather">
   <div class="current-container">
     <div class="location">
       {{ city && state ? city + ", " + state : city || state }}
@@ -85,6 +86,7 @@ function createIcon(iconLocation) {
         {{ humidity ? "Humidity: " + humidity + "%" : humidity }}
       </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -165,5 +167,62 @@ function createIcon(iconLocation) {
   position: relative;
   top: 180px;
   width: 400px;
+}
+
+@media only screen and (max-width: 430px) {
+  .current-container {
+    height: 150px;
+    width: 250px;
+    left: 8px;
+    top: 470px;
+  }
+
+  .air {
+    width: 150px;
+    height: 150px;
+    top: 470px;
+    left: 20px;
+    font-size: 22px;
+  }
+
+  .weather {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .location {
+    font-size: 24px;
+    margin-top: 5px;
+  }
+
+  .current-temp {
+    font-size: 60px;
+    margin-top: 5px;
+  }
+
+  .feels-like {
+    font-size: 22px;
+  }
+
+  .temp-details {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  .condition {
+    font-size: 26px;
+    margin-top: 1px;
+  }
+
+  .weather-icon {
+    position: fixed;
+    left: 190px;
+    top: 650px;
+    height: 65px;
+  }
+
+  .temp-details {
+    margin-top: 10px;
+  }
 }
 </style>

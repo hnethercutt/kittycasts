@@ -66,4 +66,20 @@ input {
   top: 25px;
   left: 25px;
 }
+
+@media only screen and (max-width: 430px) {
+  .search-bar {
+    width: 375px;
+    height: 37px;
+  }
+
+  input {
+    font-size: 18px;
+    width: 350px;
+  }
+
+  .search-button {
+    width: 35px;
+  }
+}
 </style>

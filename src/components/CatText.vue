@@ -156,7 +156,7 @@ watch(
 </script>
 
 <template>
-  <div id="textBox" class="text-box">Meow! Search for your city and I will give you the weather. Customize me if you'd like!</div>
+  <div id="textBox" class="text-box">Meow! Search for your city to get the weather. Customize me if you'd like!</div>
 </template>
 
 <style>
@@ -176,5 +176,14 @@ watch(
   margin-top: 20px;
   width: 500px;
   text-align: center;
+}
+
+@media only screen and (max-width: 430px) {
+  .text-box {
+    width: 300px;
+    height: 60px;
+    margin-top: -15px;
+    font-size: 14px;
+  }
 }
 </style>
