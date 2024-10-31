@@ -16,9 +16,6 @@
   <ol>
     <li>
       <a href="#about">About</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#usage">Usage</a>
