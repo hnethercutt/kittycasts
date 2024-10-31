@@ -139,6 +139,6 @@ npm run dev
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+kittycaSts is licensed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
