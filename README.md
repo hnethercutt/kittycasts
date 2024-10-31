@@ -48,8 +48,6 @@ kittycaSts is still a work in progress, but I've gotten most of it completed now
 
 <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D">
 
-<p align="right">(<a href="#readme">Back to top</a>)</p>
-
 <!--USAGE AND INSTALLATION-->
 ## Usage
 
