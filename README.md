@@ -1,4 +1,4 @@
-<a id="readme-top"></a>
+<a id="readme"></a>
 
 <!--APP LOGO-->
 <br />
@@ -48,7 +48,7 @@ kittycaSts is still a work in progress, but I've gotten most of it completed now
 
 <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D">
 
-<p align="right">(<a href="#readme-top">Back to top</a>)</p>
+<p align="right">(<a href="#readme">Back to top</a>)</p>
 
 <!--USAGE AND INSTALLATION-->
 ## Usage
@@ -90,7 +90,7 @@ The following will execute the npm script to start the development server with h
 npm run dev
 ```
 
-<p align="right">(<a href="#readme-top">Back to top</a>)</p>
+<p align="right">(<a href="#readme">Back to top</a>)</p>
 
 <!--USAGE EXAMPLES/SCREENSHOTS-->
 ## Screenshots
@@ -127,7 +127,7 @@ npm run dev
   <img src="https://github.com/user-attachments/assets/c3aa5856-ce74-47f2-ae09-3d7be481c509">
 </p>
 
-<p align="right">(<a href="#readme-top">Back to top</a>)</p>
+<p align="right">(<a href="#readme">Back to top</a>)</p>
 
 <!--FUTURE PLANS/TO-DO LIST-->
 ## Future Plans
@@ -140,7 +140,7 @@ npm run dev
 - [ ] Make arrow keys functional for the autocomplete search
 - [ ] Deploy
 
-<p align="right">(<a href="#readme-top">Back to top</a>)</p>
+<p align="right">(<a href="#readme">Back to top</a>)</p>
 
 ## License
 
