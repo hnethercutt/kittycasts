@@ -22,121 +22,99 @@ watch(
       case "Light drizzle":
       case "Patchy light rain":
       case "Patchy light drizzle":
-        txt = "It's a little rainy";
+      case "Patchy rain possible":
+        txt = "I hope my fur doesn't get wet!";
         break;
 
-      case "Patchy rain possible":
-        txt = "Rain is possible today";
+        case "Moderate rain at times":
+      case "Moderate rain":
+      case "Moderate or heavy shower":
+        txt = "Don't fur-get your umbrella!";
+        break;
+
+      case "Heavy rain at times":
+      case "Heavy rain":
+      case "Torrential rain shower":
+        txt = "It's raining cats and dogs outside!";
+        break;
 
       case "Sunny":
-        txt = "It's sunny";
+        txt = "Purr-fect weather for sunbathing!";
         break;
 
       case "Clear":
-        txt = "It's clear";
+        txt = "Purr-fect night to go stargazing!";
         break;
 
       case "Partly cloudy":
-        txt = "It's partly cloudy";
-        break;
-
       case "Overcast":
-        txt = "It's overcast";
+        txt = "Purr-haps the sun is just feeling a little shy today.";
         break;
 
       case "Mist":
-        txt = "It's misty";
+        txt = "Mist-erious vibes out there. Purr-haps a good day for a nap!";
         break;
 
-      case "Patchy snow possible":
-        txt = "It might snow today";
+      case "Fog":
+        txt = "It's like the world put on a fluffy gray blanket--cozy!";
+        break;
+
+      case "Freezing fog":
+        txt = "The air feels like a frosty mystery—time to bundle up!";
+        break;
+
+      case "Freezing drizzle":
+      case "Heavy freezing drizzle":
+        txt = "It’s drizzling, and it’s freezing... guess I’ll stay pawsitively cozy inside!";
+        break;
 
       case "Light sleet showers":
       case "Light sleet":
       case "Moderate or heavy sleet showers":
       case "Moderate or heavy sleet":
-        txt = "It's sleeting";
-        break;
-
       case "Patchy sleet possible":
-        txt = "Sleet is possible today";
-        break;
-
       case "Patchy freezing drizzle possible":
-        txt = "Patchy freezing drizzle is possible today";
-        break;
-
-      case "Thundery outbreaks possible":
-        txt = "There may be thunder today";
-        break;
-
-      case "Blowing snow":
-        txt = "It's blowing snow";
-        break;
-
-      case "Blizzard":
-        txt = "There is a blizzard";
-        break;
-
-      case "Fog":
-        txt = "It's foggy";
-        break;
-
-      case "Freezing fog":
-        txt = "There is freezing fog";
-        break;
-
-      case "Freezing drizzle":
-      case "Heavy freezing drizzle":
-        txt = "There is freezing drizzle";
-        break;
-
-      case "Moderate rain at times":
-      case "Moderate rain":
-      case "Heavy rain at times":
-      case "Heavy rain":
-      case "Moderate or heavy shower":
-      case "Torrential rain shower":
-        txt = "It's raining";
-        break;
-
       case "Light freezing rain":
       case "Moderate or heavy freezing rain":
-        txt = "There is freezing rain";
+        txt = "Rain or snow? Can't decide, so let's do both!";
         break;
 
+      case "Ice pellets":
+      case "Light showers of ice pellets":
+      case "Moderate or heavy showers of ice pellets":
+        txt = "Nature’s tiny ice bombs are falling—good thing I’m inside!";
+        break;
+
+      case "Patchy snow possible":
       case "Patchy light snow":
+      case "Blowing snow":
       case "Light snow":
       case "Light snow showers":
-        txt = "It's a little snowy";
-        break;
+        txt = "Make sure you dress warm today!";
 
       case "Patchy moderate snow":
       case "Moderate snow":
       case "Patchy heavy snow":
       case "Heavy snow":
       case "Moderate or heavy snow showers":
-        txt = "It's snowing";
+        txt = "Fur-tunately, I have a built-in coat for this weather!";
         break;
 
-      case "Ice pellets":
-      case "Light showers of ice pellets":
-      case "Moderate or heavy showers of ice pellets":
-        txt = "There are ice pellets";
+      case "Blizzard":
+        txt = "Good thing I'm an indoor cat!";
         break;
-
-      case "Patchy light rain with thunder":
-        txt = "It's a little rainy and thundering";
-
-      case "Moderate or heavy rain with thunder":
-        txt = "It's raining and thundering";
 
       case "Patchy light snow with thunder":
-        txt = "It's a little snowy and thundering";
-
       case "Moderate or heavy snow with thunder":
-        txt = "It's snowing and thundering";
+        txt = "Snow with thunder—guess the clouds are trying to shake things up!";
+
+      case "Thundery outbreaks possible":
+      case "Patchy light rain with thunder":
+        txt = "The sky’s growling louder than my tummy at dinner!";
         break;
+
+      case "Moderate or heavy rain with thunder":
+        txt = "Thunder and heavy rain make for the purr-fect napping soundtrack!";
     }
 
     // Creates the typewriter effect for the text display
