@@ -99,15 +99,15 @@ ul {
 }
 
 .list-0:hover {
-  background-color: rgba(198, 230, 255, 0.4);
+  background-color: rgba(210, 144, 250, 0.4);
 }
 
 .list-1:hover {
-  background-color: rgba(198, 230, 255, 0.4);
+  background-color: rgba(210, 144, 250, 0.4);
 }
 
 .list-2:hover {
-  background-color: rgba(198, 230, 255, 0.4);
+  background-color: rgba(210, 144, 250, 0.4);
 }
 
 .list-items {
