@@ -132,9 +132,8 @@ npm run dev
 ## Future Plans
 
 - [ ] Finish making the app responsive 
-- [ ] Make cat text dialogue more interesting
+- [x] Make cat text dialogue more interesting
 - [ ] Add a dark mode
-- [ ] Implement outfits for the cats based on weather
 - [ ] Add option to change weather data to metric system
 - [ ] Make arrow keys functional for the autocomplete search
 - [ ] Deploy
