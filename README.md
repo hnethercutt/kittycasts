@@ -43,7 +43,11 @@ kittycaSts is still a work in progress, but I've gotten most of it completed now
 
 ### Built With
 
-<img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D">
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 <!--USAGE AND INSTALLATION-->
 ## Usage
@@ -98,28 +102,28 @@ npm run dev
   <b>The page when it initially loads</b>
   <br />
   <br />
-  <img src="https://github.com/user-attachments/assets/b18c6d4a-b470-4b20-84b8-cbdb01614d5e">
+  <img width="1277" alt="Screenshot 2025-01-22 161514" src="https://github.com/user-attachments/assets/00410ce1-25f2-4b8f-a451-b8c31e9e737f" />
 </p>
 
 <p align="center">
   <b>The autocomplete search bar</b>
   <br />
   <br />
-  <img src="https://github.com/user-attachments/assets/4d8f0c47-8c08-49c1-a935-689f9fc690d2">
+  <img width="371" alt="search" src="https://github.com/user-attachments/assets/33cf375c-ff50-43f8-95e0-0b5eb0036a6b" />
 </p>
 
 <p align="center">
   <b>An example of weather data and the cat's text box (The text is animated)</b>
   <br />
   <br />
-  <img src="https://github.com/user-attachments/assets/00bf028f-bacd-41ee-abf6-ecb8af702a67">
+  <img width="856" alt="panel" src="https://github.com/user-attachments/assets/11949502-f703-44c1-a14f-5e10c801edff" />
 </p>
 
 <p align="center">
   <b>A cat that has been customized</b>
   <br />
   <br />
-  <img src="https://github.com/user-attachments/assets/c3aa5856-ce74-47f2-ae09-3d7be481c509">
+  <img width="823" alt="custom" src="https://github.com/user-attachments/assets/fead6656-7b4f-4639-8657-e9221c138e59" />
 </p>
 
 <p align="right">(<a href="#readme">Back to top</a>)</p>
