@@ -135,7 +135,6 @@ npm run dev
 - [x] Make cat text dialogue more interesting
 - [X] Add a dark mode
 - [ ] Add option to change weather data to metric system
-- [ ] Make arrow keys functional for the autocomplete search
 - [ ] Deploy
 
 <p align="right">(<a href="#readme">Back to top</a>)</p>
