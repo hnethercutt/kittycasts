@@ -335,7 +335,7 @@ p {
   height: 375px;
   width: 400px;
   position: absolute;
-  border-color: 3px solid rgb(0, 0, 0);
+  border: 3px solid rgb(0, 0, 0);
   border-top: none;
   top: 45px;
   right: 0.2px;
