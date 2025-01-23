@@ -43,7 +43,7 @@ watch(
         break;
 
       case "Clear":
-        txt = "Purr-fect night to go stargazing!";
+        txt = "Purr-fect night for stargazing!";
         break;
 
       case "Partly cloudy":
