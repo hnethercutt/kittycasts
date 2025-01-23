@@ -98,14 +98,8 @@ ul {
   width: 100%;
 }
 
-.list-0:hover {
-  background-color: rgba(210, 144, 250, 0.4);
-}
-
-.list-1:hover {
-  background-color: rgba(210, 144, 250, 0.4);
-}
-
+.list-0:hover,
+.list-1:hover,
 .list-2:hover {
   background-color: rgba(210, 144, 250, 0.4);
 }
