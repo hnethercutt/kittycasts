@@ -33,11 +33,11 @@
 
 <!--ABOUT-->
 ## About
-This is my first web development project. In searching for ideas for beginner projects, I saw weather apps being mentioned frequently. I checked out several good projects other people created and decided I wanted to do something a bit different. I love cute things, cats, and making digital art, so I thought it would be fun to combine those interests with my interest in web development. The idea of including a customizable cat with a "chat box," came to me almost immediately. I initially planned for the cats to pop up in outfits based on the weather and give users recommendations on what to wear that day. This is a feature I intend to implement in the future.
+This is my first web development project. In searching for ideas for beginner projects, I saw weather apps being mentioned frequently. I checked out several good projects other people created and decided I wanted to do something a bit different. I love cute things, cats, and making digital art, so I thought it would be fun to combine those things with my interest in web development. 
 
 There were also a couple things I noticed weren't featured in other beginner apps that went to the top of my list for what I wanted to implement in my own project, specifically an autocomplete search bar and accuracy when searching for cities. 
 
-So, I took my ideas, spent a ton of time drawing, spent even longer teaching myself JavaScript, CSS and Vue, as well as furthering the knowledge I did have of HTML, and voila! kittycaSts was created! 😺
+So, I took my ideas, spent a ton of time drawing (never doing that again), spent even longer teaching myself JavaScript, CSS and Vue, as well as furthering the knowledge I did have of HTML, and voila! kittycaSts was created! 😺
 
 kittycaSts is still a work in progress, but I've gotten most of it completed now. Updates to come!
 
@@ -102,7 +102,8 @@ npm run dev
   <b>The page when it initially loads</b>
   <br />
   <br />
-  <img width="1277" alt="Screenshot 2025-01-22 161514" src="https://github.com/user-attachments/assets/00410ce1-25f2-4b8f-a451-b8c31e9e737f" />
+  <img width="1277" alt="Screenshot 2025-01-22 161514" src="https://github.com/user-attachments/assets/00410ce1-25f2-4b8f-a451-b8c31e9e737f" /> 
+  <img width="1275" alt="Screenshot 2025-01-22 213439" src="https://github.com/user-attachments/assets/f4c9b200-4528-45dd-86b3-44702d74efa2" />
 </p>
 
 <p align="center">
@@ -110,6 +111,7 @@ npm run dev
   <br />
   <br />
   <img width="371" alt="search" src="https://github.com/user-attachments/assets/33cf375c-ff50-43f8-95e0-0b5eb0036a6b" />
+  <img width="370" alt="Screenshot 2025-01-22 214010" src="https://github.com/user-attachments/assets/06506916-4c8f-465b-ae1f-64c151687d28" />
 </p>
 
 <p align="center">
@@ -117,6 +119,7 @@ npm run dev
   <br />
   <br />
   <img width="856" alt="panel" src="https://github.com/user-attachments/assets/11949502-f703-44c1-a14f-5e10c801edff" />
+  <img width="857" alt="Screenshot 2025-01-22 214101" src="https://github.com/user-attachments/assets/6ffe2f33-ba0b-4d21-8306-6267549b5a42" />
 </p>
 
 <p align="center">
@@ -124,6 +127,7 @@ npm run dev
   <br />
   <br />
   <img width="823" alt="custom" src="https://github.com/user-attachments/assets/fead6656-7b4f-4639-8657-e9221c138e59" />
+  <img width="833" alt="Screenshot 2025-01-22 214725" src="https://github.com/user-attachments/assets/1b072590-69f2-4de5-95be-45133ceed849" />
 </p>
 
 <p align="right">(<a href="#readme">Back to top</a>)</p>
