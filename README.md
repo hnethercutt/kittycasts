@@ -139,6 +139,7 @@ npm run dev
 - [x] Make cat text dialogue more interesting
 - [X] Add a dark mode
 - [ ] Add option to change weather data to metric system
+- [ ] Clean up code
 - [ ] Deploy
 
 <p align="right">(<a href="#readme">Back to top</a>)</p>
