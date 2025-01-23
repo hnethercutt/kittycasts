@@ -133,7 +133,7 @@ npm run dev
 
 - [ ] Finish making the app responsive 
 - [x] Make cat text dialogue more interesting
-- [ ] Add a dark mode
+- [X] Add a dark mode
 - [ ] Add option to change weather data to metric system
 - [ ] Make arrow keys functional for the autocomplete search
 - [ ] Deploy
