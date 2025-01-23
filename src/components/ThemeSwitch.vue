@@ -55,7 +55,7 @@ body {
     input {
         color: #ffffff;
     }
-    
+
     input::placeholder {
         color: #ffffff;
     }
@@ -63,8 +63,15 @@ body {
     .search-bar {
         border-color: rgb(255, 255, 255, 0.5);
     }
+
     .search-button {
         background-image: url("/src/assets/images/search-white.png");
+    }
+
+    .list-0:hover,
+    .list-1:hover,
+    .list-2:hover {
+        background-color: rgba(165, 95, 15, 0.4);
     }
 
     .current-container {
