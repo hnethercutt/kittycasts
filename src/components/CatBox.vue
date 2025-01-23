@@ -150,14 +150,14 @@ p {
 .window-top {
   background: linear-gradient(
     90deg,
-    rgba(234, 125, 255, 0.9) 0.01%,
-    rgba(255, 218, 124, 0.9) 35%,
-    rgba(126, 197, 255, 0.9) 69.5%,
-    rgba(206, 125, 255, 0.9)
+    rgba(234, 125, 255),
+    rgba(255, 218, 124),
+    rgba(126, 197, 255),
+    rgba(206, 125, 255)
   );
-  border-left: 5px solid rgba(0, 0, 0, 0.75);
-  border-right: 5px solid rgba(0, 0, 0, 0.75);
-  border-top: 5px solid rgba(0, 0, 0, 0.75);
+  border-left: 3px solid rgba(0, 0, 0, 0.8);
+  border-right: 3px solid rgba(0, 0, 0, 0.8);
+  border-top: 3px solid rgba(0, 0, 0, 0.8);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 45px;
   left: 50px;
@@ -166,7 +166,7 @@ p {
 
 .cat-box {
   align-items: center;
-  border: 5px solid rgba(0, 0, 0, 0.75);
+  border: 3px solid rgba(0, 0, 0);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
@@ -201,7 +201,7 @@ p {
 .eyes-button:hover,
 .teeth-button:hover,
 .blush-button:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #aqua {
@@ -316,11 +316,26 @@ p {
   background-size: 200px;
 }
 
+.customize-container {
+  background-image: linear-gradient(
+    transparent 11%,
+    rgba(126, 197, 255, 0.9) 11%
+  );
+  box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px -4px rgba(0, 0, 0, 0.25);
+  height: 418px;
+  margin-left: 100px;
+  margin-top: 152px;
+  padding: 10px;
+  width: 400px;
+  position: relative;
+}
+
 .customize-border {
   height: 375px;
   width: 400px;
   position: absolute;
-  border: 3px solid black;
+  border-color: 3px solid rgb(0, 0, 0);
   border-top: none;
   top: 45px;
   right: 0.2px;
@@ -366,21 +381,6 @@ input[type="radio"]:checked + label {
 
 input[type="radio"]:checked + label + .options {
   display: block;
-}
-
-.customize-container {
-  background-image: linear-gradient(
-    transparent 11%,
-    rgba(126, 197, 255, 0.9) 11%
-  );
-  box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.25),
-    0px 4px 4px -4px rgba(0, 0, 0, 0.25);
-  height: 418px;
-  margin-left: 100px;
-  margin-top: 152px;
-  padding: 10px;
-  width: 400px;
-  position: relative;
 }
 
 @media only screen and (max-width: 430px) {

@@ -35,7 +35,7 @@ watch(selectedCity, async (city) => {
 
 .search-bar {
   display: flex;
-  border-color: auto;
+  border: rgba(0, 0, 0, 0.8);
   border-width: 3px;
   border-style: solid;
   width: 445px;
@@ -52,9 +52,15 @@ input {
   font-family: "Chela One", system-ui;
 }
 
+input::placeholder
+{
+  color: #000;
+}
+
 .search-button {
   background-color: transparent;
   background-image: url("/src/assets/images/search.png");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border: none;

@@ -7,17 +7,14 @@
 
 html {
   height: 100%;
+  width: 100%;
 }
 
 body {
   font-family: "Chela One", system-ui;
-  font-weight: 400;
   text-align: left;
-  background: linear-gradient(rgba(234, 125, 255, 0.9) 0.01%, 
-                                     rgba(255, 218, 124, 0.9) 35%, 
-                                     rgba(126, 197, 255, 0.9) 69.5%, 
-                                     rgba(206, 125, 255, 0.9));
   background-attachment: fixed;
   background-size: 100%;
   margin: 0;
 }
+

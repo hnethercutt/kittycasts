@@ -98,7 +98,7 @@ function createIcon(iconLocation) {
 
 .current-container {
   align-items: center;
-  background-color: rgba(252, 230, 188, 0.75);
+  background-color: rgba(252, 230, 188, 0.9);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
@@ -123,7 +123,7 @@ function createIcon(iconLocation) {
 }
 
 .current-temp {
-  color: rgba(0, 23, 81, 0.72);
+  color: rgb(24, 50, 117);
   display: flex;
   font-size: 84px;
   margin-top: 10px;

@@ -3,23 +3,21 @@ import { ref } from "vue";
 import Search from "./components/Search.vue";
 import WeatherPanel from "./components/WeatherPanel.vue";
 import CatBox from "./components/CatBox.vue";
+import ThemeSwitch from "./components/ThemeSwitch.vue";
 
 const weatherData = ref(null);
 
 function handleWeatherData(data) {
   weatherData.value = data;
 }
+
 </script>
 
 <template>
   <header>
     <img class="logo" src="/src/assets/images/kitty.png" />
     <h1>kittycaSts</h1>
-    <a href="https://github.com/conranh/kittycasts"
-      ><img src="/src/assets/images/github-mark.png" class="github-link"
-    /></a>
-    <!--Adding this here for whenever I make dark mode
-    <a href="https://github.com/conranh/kittycasts"><img src="/src/assets/images/github-mark-white.png"></a>-->
+   <ThemeSwitch/>
   </header>
   <div class="container">
     <div class="panel">
@@ -31,21 +29,14 @@ function handleWeatherData(data) {
 </template>
 
 <style>
+
 h1 {
-  position: fixed;
+  position: absolute;
   left: 170px;
   font-weight: 500;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 68px;
   margin-top: 0px;
-}
-
-.github-link {
-  width: 50px;
-  height: auto;
-  position: absolute;
-  right: 20px;
-  top: 20px;
 }
 
 .container {
@@ -66,14 +57,14 @@ header {
   position: relative;
   margin: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  background-color: rgba(255, 255, 255, 0.21);
+  background-color: rgba(255, 255, 255, 0.05);
   height: 10vh;
 }
 
 .panel {
   position: relative;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.09);
   height: 90vh;
   width: 500px;
 }
