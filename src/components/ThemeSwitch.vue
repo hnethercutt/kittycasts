@@ -5,15 +5,6 @@ function darkMode() {
   const github = document.getElementById("github");
 
   body.classList.toggle("dark-mode");
-
-  if(checkbox.checked)
-  {
-    github.src="/src/assets/images/github-mark-white.png";
-  }
-  else
-  {
-    github.src="/src/assets/images/github-mark.png";
-  }
 }
 
 </script>
@@ -26,8 +17,8 @@ function darkMode() {
                 <div class="slider round"></div>
             </label>
         </div>
-        <a href="https://github.com/conranh/kittycasts">
-            <img src="/src/assets/images/github-mark.png" class="github-link" id="github"/>
+        <a class="github-link" href="https://github.com/conranh/kittycasts">
+          <div class="github-icon"></div>
         </a>
     </body>
 </template>
@@ -50,6 +41,10 @@ body {
     .theme-switch {
         border: none;
         background: transparent;
+    }
+
+    .github-icon {
+      background-image: url(/src/assets/images/github-mark-white.png);
     }
 
     input {
@@ -201,11 +196,19 @@ input:checked + .slider:before {
 }
 
 .github-link {
-  width: 50px;
-  height: auto;
   position: absolute;
   right: 100px;
   top: 20px;
+}
+
+.github-icon
+{
+  width: 50px;
+  height: 50px;
+  background-image: url(/src/assets/images/github-mark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 </style>
