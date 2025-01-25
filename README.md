@@ -18,7 +18,7 @@
       <a href="#about">About</a>
     </li>
     <li>
-      <a href="#usage">Usage</a>
+      <a href="#usage">Running the Website Locally</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
@@ -26,7 +26,6 @@
       </ul>
     </li>
     <li><a href="#screenshots">Screenshots</a></li>
-    <li><a href="#future-plans">Future Plans</a></li>
     <li><a href="#license">License</a></li>
   </ol>
 </details>
@@ -39,8 +38,7 @@ There were also a couple things I noticed weren't featured in other beginner app
 
 So, I took my ideas, spent a ton of time drawing (never doing that again), spent even longer teaching myself JavaScript, CSS and Vue, as well as furthering the knowledge I did have of HTML, and voila! kittycaSts was created! 😺
 
-kittycaSts is still a work in progress, but I've gotten most of it completed now. Updates to come!
-
+### Preview at [kittycaSts.com](www.kittycasts.com)
 ### Built With
 
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -50,7 +48,7 @@ kittycaSts is still a work in progress, but I've gotten most of it completed now
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 <!--USAGE AND INSTALLATION-->
-## Usage
+## Running the Website Locally
 
 The following section defines how to download and use the **kittycasts** application.
 
@@ -129,18 +127,6 @@ npm run dev
   <img width="823" alt="custom" src="https://github.com/user-attachments/assets/fead6656-7b4f-4639-8657-e9221c138e59" />
   <img width="833" alt="Screenshot 2025-01-22 214725" src="https://github.com/user-attachments/assets/1b072590-69f2-4de5-95be-45133ceed849" />
 </p>
-
-<p align="right">(<a href="#readme">Back to top</a>)</p>
-
-<!--FUTURE PLANS/TO-DO LIST-->
-## Future Plans
-
-- [ ] Finish making the app responsive 
-- [x] Make cat text dialogue more interesting
-- [X] Add a dark mode
-- [ ] Add option to change weather data to metric system
-- [ ] Clean up code
-- [ ] Deploy
 
 <p align="right">(<a href="#readme">Back to top</a>)</p>
 
