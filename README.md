@@ -38,7 +38,7 @@ There were also a couple things I noticed weren't featured in other beginner app
 
 So, I took my ideas, spent a ton of time drawing (never doing that again), spent even longer teaching myself JavaScript, CSS and Vue, as well as furthering the knowledge I did have of HTML, and voila! kittycaSts was created! 😺
 
-### Preview at [kittycaSts.com](www.kittycasts.com)
+### Preview at [kittycaSts.com](https://www.kittycasts.com)
 ### Built With
 
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
