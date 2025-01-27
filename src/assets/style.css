@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Share+Tech+Mono&display=swap');
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
 
 html {
   height: 100%;
@@ -16,5 +11,105 @@ body {
   background-attachment: fixed;
   background-size: 100%;
   margin: 0;
+  background: linear-gradient(rgba(234, 125, 255, 0.9) 18%, 
+            rgba(255, 218, 124, 1), 
+            rgba(126, 197, 255, 1), 
+            rgba(206, 125, 255, 1));
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+.dark-mode {
+  color: #ffffff;
+  background: linear-gradient(rgb(1, 1, 30),
+          rgb(19, 1, 44),
+          rgb(54, 1, 65), 
+          rgb(69, 35, 2));
+
+  .theme-switch {
+      border: none;
+      background: transparent;
+  }
+
+  .github-icon {
+    background-image: url(/src/assets/images/github-mark-white.png);
+  }
+
+  input {
+    color: #ffffff;
+  }
+
+  input::placeholder {
+    color: #ffffff;
+  }
+
+  .search-bar {
+    border-color: rgb(255, 255, 255, 0.5);
+  }
+
+  .search-button {
+    background-image: url("/src/assets/images/search-white.png");
+  }
+
+  .list-0:hover,
+  .list-1:hover,
+  .list-2:hover {
+      background-color: rgba(165, 95, 15, 0.4);
+  }
+
+  .current-container {
+      background-color: rgba(10, 8, 38, 0.7);
+  }
+
+  .current-temp {
+    color: rgb(241, 158, 225);
+  }
+
+  .air {
+    background-color: rgba(39, 20, 45, 0.7);
+  }
+
+  .window-top {
+    background: linear-gradient(
+    90deg,
+    rgb(3, 3, 63),
+    rgb(37, 2, 86),
+    rgb(82, 2, 98),
+    rgb(109, 56, 2));
+    border-left: 3px solid rgb(255, 255, 255, 0.5);
+    border-right: 3px solid rgb(255, 255, 255, 0.5);
+    border-top: 3px solid rgb(255, 255, 255, 0.5);
+  }
+
+  .cat-box {
+    border: 3px solid rgb(255, 255, 255, 0.5);
+  }
+
+  .text-box {
+    background-color: rgb(39, 39, 39);
+    border: 3px solid rgba(0, 0, 0, 0.8);
+    color: #fff;
+  }
+
+  .customize-container {
+    background-image: linear-gradient(transparent 11%,
+                    rgba(247, 124, 222, 0.2) 11%);
+  }
+  .customize-border {
+    border: 3px solid rgb(255, 255, 255, 0.5);
+  }
+
+  .custom-label {
+    background-color: rgba(247, 124, 222, 0.5);
+    border: 3px solid rgb(255, 255, 255, 0.5);
+  }
+
+  .line {
+    border-bottom: 3px solid rgb(255, 255, 255, 0.5);
+    width: 135px;
+  }
+
+  input[type="radio"]:checked + label {
+    background-color: rgba(247, 124, 222, 0.2);
+  }
+}
