@@ -69,7 +69,7 @@ onMounted(() => {
     <div class="customize-border"></div>
     <div class="customize">
       <input id="fur-tab" type="radio" name="customize" checked="checked" />
-      <label for="fur-tab">Fur</label>
+      <label class="custom-label" for="fur-tab">Fur</label>
       <div class="options">
         <button class="fur-button" id="black"></button>
         <button class="fur-button" id="brown-tabby"></button>
@@ -82,7 +82,7 @@ onMounted(() => {
         <button class="fur-button" id="calico"></button>
       </div>
       <input id="eyes-tab" type="radio" name="customize" />
-      <label for="eyes-tab">Eyes</label>
+      <label class="custom-label" for="eyes-tab">Eyes</label>
       <div class="options">
         <button class="eyes-button" id="aqua" type="submit"></button>
         <button class="eyes-button" id="blue"></button>
@@ -95,14 +95,14 @@ onMounted(() => {
         <button class="eyes-button" id="yellow"></button>
       </div>
       <input id="teeth-tab" type="radio" name="customize" />
-      <label for="teeth-tab">Teeth</label>
+      <label class="custom-label" for="teeth-tab">Teeth</label>
       <div class="options">
         <button class="teeth-button" id="teeth-none"></button>
         <button class="teeth-button" id="one"></button>
         <button class="teeth-button" id="two"></button>
       </div>
       <input id="blush-tab" type="radio" name="customize" />
-      <label for="blush-tab">Blush</label>
+      <label class="custom-label" for="blush-tab">Blush</label>
       <div class="options">
         <button class="blush-button" id="blush-none"></button>
         <button class="blush-button" id="blush1"></button>
@@ -354,7 +354,7 @@ p {
   margin: -10px;
 }
 
-label {
+.custom-label {
   background-color: rgba(159, 232, 250, 0.7);
   padding: 0.7em 1em;
   cursor: pointer;
