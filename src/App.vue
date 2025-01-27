@@ -118,7 +118,7 @@ function handleWeatherData(data) {
   height: 30px;
   width: 30px;
   margin: 10px;
-  background-image: url("/src/assets/images/github-mark.png");
+  background-image: url("/src/assets/icons/github-mark.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
