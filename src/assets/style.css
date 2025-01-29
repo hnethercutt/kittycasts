@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Share+Tech+Mono&display=swap');
 
 html {
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
+  position: relative;
 }
 
 body {
+  height: 100%;
+  width: 100%;
   font-family: "Chela One", system-ui;
   text-align: left;
   background-attachment: fixed;
-  background-size: 100%;
-  margin: 0;
-  background: linear-gradient(rgba(234, 125, 255, 0.9) 18%, 
+  margin: auto;
+  background: linear-gradient(rgba(234, 125, 255, 0.9), 
             rgba(255, 218, 124, 1), 
             rgba(126, 197, 255, 1), 
             rgba(206, 125, 255, 1));

@@ -38,16 +38,25 @@ function handleWeatherData(data) {
     </ul>
   </nav>  
 </header>
+<div class="search-stuff">
+<Search @weather-data="handleWeatherData" />
+</div>
 <div class="container">
-  <div class="panel">
-    <Search @weather-data="handleWeatherData" />
-    <WeatherPanel v-bind="weatherData" />
+  <div class="weather-stuff">
+  <WeatherPanel v-bind="weatherData" />
   </div>
+  <div class="cat-stuff">
   <CatBox v-bind="weatherData"/>
+  </div>
+  <p>© 2025 Hannah Nethercutt</p>
 </div>
 </template>
 
 <style>
+p {
+  font-size: 18px;
+}
+
 .header{
   width: 100%;
   background-color: rgba(255, 255, 255, 0.05);
@@ -134,18 +143,24 @@ function handleWeatherData(data) {
   margin-left: auto;
 }
 
+.search-stuff {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  width: auto;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.03);
 }
 
-.panel {
-  width: 500px;
-  height: 90vh;
-  position: relative;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: rgba(255, 255, 255, 0.09);
-}
 
 @media screen and (min-width: 480px) {
   .title {
@@ -196,4 +211,9 @@ function handleWeatherData(data) {
       display: none;
   }
 }
+
+@media screen and (min-width: 1025px) 
+{
+}
+
 </style>

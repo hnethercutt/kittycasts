@@ -53,28 +53,22 @@ function createIcon(iconLocation) {
 </script>
 
 <template>
-  <div class="weather">
-  <div class="current-container">
-    <div class="location">
-      {{ city && state ? city + ", " + state : city || state }}
-    </div>
-    <div class="temp-container">
-      <div class="current-temp">
-        {{ currentTemp ? currentTemp + "°" : currentTemp }}
-      </div>
-      <div class="temp-details">
-        <div class="feels-like">
-          {{ feelsLike ? "Feels Like: " + feelsLike + "°" : feelsLike }}
+  <div class="weather-container">
+    <div class="current-container">
+      <div class="location">{{ city && state ? city + ", " + state : city || state }}</div>
+      <div class="temp-container">
+        <div class="current">
+          <div class="current-temp">{{ currentTemp ? currentTemp + "°" : currentTemp }}</div>
+          <div class="condition">{{ condition }}</div>
+          <div id="icon"></div>
         </div>
+      <div class="temp-details">  
+        <div class="feels-like">{{ feelsLike ? "Feels Like: " + feelsLike + "°" : feelsLike }}</div>
         <div>{{ high ? "High: " + high + "°" : high }}</div>
         <div>{{ low ? "Low: " + low + "°" : low }}</div>
       </div>
     </div>
-    <div class="condition">{{ condition }}</div>
-    <div id="icon"></div>
-  </div>
-
-  <div class="air-container">
+    </div>
     <div class="air">
       <div>
         {{ wind ? "Wind: " + wind + " mph" : wind }}
@@ -85,15 +79,19 @@ function createIcon(iconLocation) {
       <div>
         {{ humidity ? "Humidity: " + humidity + "%" : humidity }}
       </div>
-    </div>
   </div>
-  </div>
+</div>
 </template>
 
 <style>
 .weather-icon {
-  width: auto;
-  height: 110px;
+  height: 75px;
+  margin-top: 5px;
+}
+
+.temp-container {
+  display: flex;
+  gap: 2em;
 }
 
 .current-container {
@@ -102,56 +100,39 @@ function createIcon(iconLocation) {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  height: 350px;
-  left: 50px;
-  position: relative;
+  height: 200px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  top: 160px;
-  width: 400px;
+  width: 300px;
 }
 
 .location {
-  display: flex;
-  font-size: 36px;
-  justify-content: center;
-  margin-top: 15px;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 5px;
 }
 
-.temp-container {
+.current {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
 }
-
 .current-temp {
   color: rgb(24, 50, 117);
-  display: flex;
-  font-size: 84px;
-  margin-top: 10px;
-  justify-content: flex-start;
+  font-size: 46px;
 }
 
 .temp-details {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  font-size: 24px;
-  justify-content: space-around;
-  margin-left: 25px;
-  margin-top: 20px;
+
+  font-size: 18px;
+  margin-top: 40px;
 }
 
 .feels-like {
-  font-size: 28px;
+  font-size: 20px;
 }
 
 .condition {
-  font-size: 34px;
-  margin-top: 20px;
-}
-
-.air-container {
-  display: flex;
-  flex-direction: row;
+  font-size: 26px;
 }
 
 .air {
@@ -160,69 +141,82 @@ function createIcon(iconLocation) {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  font-size: 28px;
-  height: 175px;
-  justify-content: space-around;
-  left: 50px;
-  position: relative;
-  top: 180px;
-  width: 400px;
+  font-size: 20px;
+  height: 80px;
+  justify-content: center;
+  width: 300px;
+  margin-top: 10px;
 }
 
-@media only screen and (max-width: 430px) {
+.weather-container {
+  margin: 5px;
+}
+
+@media screen and (min-width: 480px) {
+  .weather-container {
+    display: flex;
+  }
+
   .current-container {
-    height: 150px;
-    width: 250px;
-    left: 8px;
-    top: 470px;
+    width: 300px;
   }
 
   .air {
     width: 150px;
-    height: 150px;
-    top: 470px;
-    left: 20px;
-    font-size: 22px;
+    height: 200px;
+    margin-top: 0;
+    margin-left: 10px;
+    gap: 1em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .current-container {
+    width: 350px;
+    height: 250px;
   }
 
-  .weather {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .location {
+  .air {
+    width: 175px;
+    height: 250px;
+    gap: 30px;
     font-size: 24px;
-    margin-top: 5px;
   }
 
   .current-temp {
-    font-size: 60px;
-    margin-top: 5px;
+  font-size: 72px;
+}
+
+.temp-details {
+
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+.feels-like {
+  font-size: 24px;
+}
+
+.condition {
+  font-size: 26px;
+}
+
+.location {
+  font-size: 30px;
+}
+}
+
+@media screen and (min-width: 1025px) {
+  .current-container {
+    width: 400px;
+    margin-bottom: 10px;
   }
 
-  .feels-like {
-    font-size: 22px;
-  }
-
-  .temp-details {
-    font-size: 18px;
-    margin-left: 10px;
-  }
-
-  .condition {
-    font-size: 26px;
-    margin-top: 1px;
-  }
-
-  .weather-icon {
-    position: fixed;
-    left: 190px;
-    top: 650px;
-    height: 65px;
-  }
-
-  .temp-details {
-    margin-top: 10px;
+  .air {
+    width: 200px;
+    height: 250px;
+    font-size: 28px;
+    text-align: center;
   }
 }
 </style>

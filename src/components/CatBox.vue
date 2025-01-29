@@ -37,12 +37,12 @@ onMounted(() => {
 </script>
 
 <template>
+  <div class="yep">
   <div class="window-container">
     <div class="window-top"></div>
     <div class="cat-box">
       <!--Placeholder cat-->
       <div class="cat">
-        <img class="test" />
         <img
           id="eyeColor"
           class="eye-color"
@@ -62,9 +62,8 @@ onMounted(() => {
       </div>
       <CatText :condition="condition"/>
     </div>
-    <p>&#169; 2024 Hannah Nethercutt</p>
   </div>
-
+  <div class="wrapper">
   <div class="customize-container">
     <div class="customize-border"></div>
     <div class="customize">
@@ -111,16 +110,19 @@ onMounted(() => {
       <div class="line"></div>
     </div>
   </div>
+</div>
+</div>
 </template>
 
 <style>
-p {
-  margin-left: 50px;
-  font-size: 18px;
+.yep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .teeth {
-  height: 500px;
+  height: 300px;
   position: absolute;
 }
 
@@ -128,16 +130,16 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 115px;
+  margin-top: 75px;
 }
 
 .blush {
-  height: 500px;
+  height: 300px;
   position: absolute;
 }
 
 .eye-color {
-  height: 500px;
+  height: 300px;
   position: absolute;
 }
 
@@ -159,9 +161,8 @@ p {
   border-right: 3px solid rgba(0, 0, 0, 0.8);
   border-top: 3px solid rgba(0, 0, 0, 0.8);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 45px;
-  left: 50px;
-  position: relative;
+  height: 20px;
+  margin-top: 10px;
 }
 
 .cat-box {
@@ -170,16 +171,14 @@ p {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  height: 600px;
+  height: 300px;
   justify-content: center;
-  gap: 250px;
-  left: 50px;
-  position: relative;
-  width: 600px;
+  gap: 120px;
+  width: 300px;
 }
 
 .fur-color {
-  height: 500px;
+  height: 300px;
   position: absolute;
 }
 
@@ -316,24 +315,27 @@ p {
   background-size: 200px;
 }
 
+.wrapper {
+  margin: 10px;
+}
+
 .customize-container {
   background-image: linear-gradient(
-    transparent 11%,
-    rgba(126, 197, 255, 0.9) 11%
+    transparent 6%,
+    rgba(126, 197, 255, 0.9)7%
   );
   box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.25),
     0px 4px 4px -4px rgba(0, 0, 0, 0.25);
-  height: 418px;
-  margin-left: 100px;
-  margin-top: 152px;
-  padding: 10px;
-  width: 400px;
+  height: 650px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 300px;
   position: relative;
 }
 
 .customize-border {
-  height: 375px;
-  width: 400px;
+  height: 608px;
+  width: 100%;
   position: absolute;
   border: 3px solid rgb(0, 0, 0);
   border-top: none;
@@ -342,16 +344,16 @@ p {
   box-sizing: border-box;
   pointer-events: none;
 }
+
 .line {
   border-bottom: 3px solid black;
-  width: 135px;
+  width: 38px;
 }
 
 .customize {
   display: flex;
   flex-wrap: wrap;
   width: 400px;
-  margin: -10px;
 }
 
 .custom-label {
@@ -363,10 +365,10 @@ p {
 }
 
 .options {
-  padding-left: 10px;
   order: 1;
-  background-color: transparent;
-  width: 510px;
+  display: flex;
+  width: 300px;
+  padding-left: 20px;
 }
 
 input[type="radio"],
@@ -383,72 +385,134 @@ input[type="radio"]:checked + label + .options {
   display: block;
 }
 
-@media only screen and (max-width: 430px) {
-  .cat-box {
-    height: 290px;
-    width: 350px;
-    position: absolute;
-    left: 40px;
-    top: 260px;
-    gap: 150px;
+@media screen and (min-width: 480px) {
+  .eye-color {
+    height: 350px;
   }
 
-  .window-top {
-    width: 350px;
-    position: absolute;
-    height: 25px;
-    left: 40px;
-    top: 235px;
-  }
   .fur-color {
-    height: 275px;
+    height: 350px;
   }
 
   .eye-color {
-    height: 275px;
+    height: 350px;
   }
 
   .teeth {
-    height: 275px;
+    height: 350px;
   }
 
   .blush {
-    height: 275px;
+    height: 350px;
   }
 
-  .cat {
-    margin-top: 75px;
-  }
-
-  .customize-container {
-    position: absolute;
-    top: 575px;
-    width: 400px;
-    margin-left: 15px;
-    height: 182px;
-    background-image: linear-gradient(
-    transparent 25%,
-    rgba(126, 197, 255, 0.9) 11%
-  );
-  }
-
-  .customize-border {
-    height: 140px;
-    width: 399.5px;
+  .cat-box {
+    height: 350px;
+    width: 350px;
+    gap: 145px;
   }
 
   .options {
-    overflow: auto;
-    white-space: nowrap;
-  }
-
-  .fur-button,
-.eyes-button,
-.teeth-button,
-.blush-button {
-  display:inline-block;
-  margin-bottom: 15px;
+  width: 400px;
+  padding-left: 10px;
 }
 
+.customize-container {
+  height: 430px;
+  width: 400px;
+  background-image: linear-gradient(
+    transparent 8%,
+    rgba(126, 197, 255, 0.9)8%
+  );
+}
+
+.customize-border {
+  height: 387px;
+}
+
+.line {
+  width: 135px;
+}
+
+.wrapper {
+  margin: 20px;
+}
+
+.window-container {
+  margin-left: 10px;
+}
+}
+
+@media screen and (min-width: 768px) 
+{
+  .yep {
+  flex-direction: row;
+  }
+
+  .customize-container {
+  background-image: linear-gradient(
+    transparent 10%,
+    rgba(126, 197, 255, 0.9)10%
+  );
+}
+}
+
+@media screen and (min-width: 1025px) 
+{
+  .eye-color {
+    height: 400px;
+  }
+
+  .fur-color {
+    height: 400px;
+  }
+
+  .eye-color {
+    height: 400px;
+  }
+
+  .teeth {
+    height: 400px;
+  }
+
+  .blush {
+    height: 400px;
+  }
+
+  .cat-box {
+    height: 400px;
+    width: 400px;
+    gap: 145px;
+  }
+
+  .options {
+  width: 400px;
+  padding-left: 10px;
+}
+
+.customize-container {
+  height: 430px;
+  width: 400px;
+  background-image: linear-gradient(
+    transparent 8%,
+    rgba(126, 197, 255, 0.9)8%
+  );
+}
+
+.customize-border {
+  height: 387px;
+}
+
+.line {
+  width: 135px;
+}
+
+.wrapper {
+  margin: 20px;
+}
+
+.window-container {
+  margin-left: 10px;
+}
 }
 </style>
