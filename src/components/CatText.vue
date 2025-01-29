@@ -149,19 +149,22 @@ watch(
   font-family: "Share Tech Mono", monospace;
   font-weight: 400;
   font-size: 18px;
-  height: 100px;
   align-items: center;
   margin-top: 20px;
-  width: 500px;
   text-align: center;
+  width: 280px;
 }
 
-@media only screen and (max-width: 430px) {
+@media screen and (min-width: 480px) {
   .text-box {
     width: 300px;
-    height: 60px;
-    margin-top: -15px;
-    font-size: 14px;
   }
 }
+
+@media screen and (min-width: 1025px) {
+  .text-box {
+    width: 350px;
+  }
+}
+
 </style>

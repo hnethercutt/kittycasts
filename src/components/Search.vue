@@ -38,15 +38,15 @@ watch(selectedCity, async (city) => {
   border: rgba(0, 0, 0, 0.8);
   border-width: 3px;
   border-style: solid;
-  width: 445px;
-  height: 45px;
+  width: 300px;
+  height: 35px;
 }
 
 input {
   outline: none;
   border: none;
   padding: 10px;
-  font-size: 20px;
+  font-size: 18px;
   width: 420px;
   background-color: transparent;
   font-family: "Chela One", system-ui;
@@ -71,24 +71,16 @@ input::placeholder
 .search-container {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 25px;
-  left: 25px;
+  margin-top: 30px;
 }
 
-@media only screen and (max-width: 430px) {
+@media screen and (min-width: 480px) {
   .search-bar {
-    width: 375px;
-    height: 37px;
+    width: 400px;
   }
 
   input {
-    font-size: 18px;
-    width: 350px;
-  }
-
-  .search-button {
-    width: 35px;
+    font-size: 22px;
   }
 }
 </style>
