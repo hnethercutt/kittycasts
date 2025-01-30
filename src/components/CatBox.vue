@@ -34,12 +34,28 @@ onMounted(() => {
     });
   });
 });
+
+function showCustom()
+{
+  document.getElementById("wrapper").style.display = "block";
+  document.getElementById("customButton").style.display = "none";
+  document.getElementById("closeButton").style.display = "block";
+}
+
+function closeCustom()
+{
+  document.getElementById("wrapper").style.display = "none";
+  document.getElementById("closeButton").style.display = "none";
+  document.getElementById("customButton").style.display = "block";
+}
+
 </script>
 
 <template>
   <div class="yep">
   <div class="window-container">
-    <div class="window-top"></div>
+    <button id="customButton" class="custom-button" @click="showCustom()">Click Here to Customize!</button>
+    <button id="closeButton" class="close-button" @click="closeCustom()">Click Here to Finish Customizing!</button>
     <div class="cat-box">
       <!--Placeholder cat-->
       <div class="cat">
@@ -63,7 +79,7 @@ onMounted(() => {
       <CatText :condition="condition"/>
     </div>
   </div>
-  <div class="wrapper">
+  <div class="wrapper" id="wrapper">
   <div class="customize-container">
     <div class="customize-border"></div>
     <div class="customize">
@@ -115,6 +131,10 @@ onMounted(() => {
 </template>
 
 <style>
+.close-button {
+  display: none;
+}
+
 .yep {
   display: flex;
   flex-direction: column;
@@ -130,7 +150,7 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 75px;
+  margin-top: 90px;
 }
 
 .blush {
@@ -149,7 +169,8 @@ onMounted(() => {
   justify-content: center;
 }
 
-.window-top {
+.custom-button,
+.close-button {
   background: linear-gradient(
     90deg,
     rgba(234, 125, 255),
@@ -161,8 +182,11 @@ onMounted(() => {
   border-right: 3px solid rgba(0, 0, 0, 0.8);
   border-top: 3px solid rgba(0, 0, 0, 0.8);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 20px;
+  height: 25px;
   margin-top: 10px;
+  font-family: "Chela One", system-ui;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .cat-box {
@@ -172,9 +196,9 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   height: 300px;
-  justify-content: center;
-  gap: 120px;
   width: 300px;
+  gap: 130px;
+  pointer-events: none;
 }
 
 .fur-color {
@@ -316,6 +340,7 @@ onMounted(() => {
 }
 
 .wrapper {
+  display: none;
   margin: 10px;
 }
 
@@ -335,7 +360,7 @@ onMounted(() => {
 
 .customize-border {
   height: 608px;
-  width: 100%;
+  width: 99.9%;
   position: absolute;
   border: 3px solid rgb(0, 0, 0);
   border-top: none;
@@ -369,6 +394,7 @@ onMounted(() => {
   display: flex;
   width: 300px;
   padding-left: 20px;
+  
 }
 
 input[type="radio"],
@@ -412,6 +438,10 @@ input[type="radio"]:checked + label + .options {
     gap: 145px;
   }
 
+  .cat {
+    margin-top: 100px;
+  }
+
   .options {
   width: 400px;
   padding-left: 10px;
@@ -438,15 +468,13 @@ input[type="radio"]:checked + label + .options {
   margin: 20px;
 }
 
-.window-container {
-  margin-left: 10px;
-}
 }
 
 @media screen and (min-width: 768px) 
 {
   .yep {
   flex-direction: row;
+  justify-content: center;
   }
 
   .customize-container {
@@ -454,6 +482,15 @@ input[type="radio"]:checked + label + .options {
     transparent 10%,
     rgba(126, 197, 255, 0.9)10%
   );
+}
+
+.cat-box {
+  height: 400px;
+  gap: 160px;
+}
+
+.cat {
+  margin-top: 125px;
 }
 }
 
@@ -480,39 +517,18 @@ input[type="radio"]:checked + label + .options {
   }
 
   .cat-box {
-    height: 400px;
-    width: 400px;
-    gap: 145px;
+    height: 450px;
+    width: 450px;
+    gap: 175px;
   }
 
-  .options {
-  width: 400px;
-  padding-left: 10px;
-}
+  .window-top {
+    height: 30px;
+  }
 
-.customize-container {
-  height: 430px;
-  width: 400px;
-  background-image: linear-gradient(
-    transparent 8%,
-    rgba(126, 197, 255, 0.9)8%
-  );
-}
+  .wrapper {
+    margin-top: 85px;
+  }
 
-.customize-border {
-  height: 387px;
-}
-
-.line {
-  width: 135px;
-}
-
-.wrapper {
-  margin: 20px;
-}
-
-.window-container {
-  margin-left: 10px;
-}
 }
 </style>
