@@ -88,6 +88,10 @@ function createIcon(iconLocation) {
 </template>
 
 <style>
+.weather-container {
+  margin-bottom: 25px;
+}
+
 .current-container {
   align-items: center;
   background-color: rgba(252, 230, 188, 0.9);
