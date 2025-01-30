@@ -2,6 +2,70 @@
 import { onMounted, toRefs } from "vue";
 import CatText from "./CatText.vue";
 
+import blackFur from '/src/assets/images/fur/black.png';
+import brownTabbyFur from '/src/assets/images/fur/brown-tabby.png';
+import calicoFur from '/src/assets/images/fur/calico.png';
+import greyTabbyFur from '/src/assets/images/fur/grey-tabby.png';
+import orangeTabbyFur from '/src/assets/images/fur/orange-tabby.png';
+import orangeWhiteFur from '/src/assets/images/fur/orange-white.png';
+import siameseFur from '/src/assets/images/fur/siamese.png';
+import tuxedoFur from '/src/assets/images/fur/tuxedo.png';
+import whiteFur from '/src/assets/images/fur/white.png';
+
+import aquaEyes from '/src/assets/images/eyes/aqua.png';
+import blueEyes from '/src/assets/images/eyes/blue.png';
+import greenEyes from '/src/assets/images/eyes/green.png';
+import greyEyes from '/src/assets/images/eyes/grey.png';
+import orangeEyes from '/src/assets/images/eyes/orange.png';
+import pinkEyes from '/src/assets/images/eyes/pink.png';
+import purpleEyes from '/src/assets/images/eyes/purple.png';
+import redEyes from '/src/assets/images/eyes/red.png';
+import yellowEyes from '/src/assets/images/eyes/yellow.png';
+
+import oneTooth from '/src/assets/images/teeth/one.png';
+import twoTeeth from '/src/assets/images/teeth/two.png';
+import noTeeth from '/src/assets/images/teeth/teeth-none.png';
+
+import blush1 from '/src/assets/images/blush/blush1.png';
+import blush2 from '/src/assets/images/blush/blush2.png';
+import noBlush from '/src/assets/images/blush/blush-none.png';
+
+const furColors = {
+  'black' : blackFur,
+  'brown-tabby' : brownTabbyFur,
+  'calico' : calicoFur,
+  'grey-tabby' : greyTabbyFur,
+  'orange-tabby' : orangeTabbyFur,
+  'orange-white' : orangeWhiteFur,
+  'siamese' : siameseFur,
+  'tuxedo' : tuxedoFur,
+  'white' : whiteFur
+}
+
+const eyeColors = {
+  'aqua' : aquaEyes,
+  'blue' : blueEyes,
+  'green' : greenEyes,
+  'grey' : greyEyes,
+  'orange' : orangeEyes,
+  'pink' : pinkEyes,
+  'purple' : purpleEyes,
+  'red' : redEyes,
+  'yellow' : yellowEyes
+}
+
+const teethType = {
+  'one' : oneTooth,
+  'two' : twoTeeth,
+  'teeth-none' : noTeeth
+}
+
+const blushType = {
+  'blush1' : blush1,
+  'blush2' : blush2,
+  'blush-none' : noBlush
+}
+
 const props = defineProps({
   condition: String
 });
@@ -24,13 +88,13 @@ onMounted(() => {
       const cl = i.className;
 
       if (cl == "fur-button") {
-        fur.src = "/src/assets/images/fur/" + id + ".png";
+        fur.src = furColors[id];
       } else if (cl == "eyes-button") {
-        eyes.src = "/src/assets/images/eyes/" + id + ".png";
+        eyes.src = eyeColors[id];
       } else if (cl == "teeth-button") {
-        teeth.src = "/src/assets/images/teeth/" + id + ".png";
+        teeth.src = teethType[id];
       } else if (cl == "blush-button") {
-        blush.src = "/src/assets/images/blush/" + id + ".png";
+        blush.src = blushType[id];
       }
     });
   });
