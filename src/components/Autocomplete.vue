@@ -101,7 +101,7 @@ ul {
 .list-0:hover,
 .list-1:hover,
 .list-2:hover {
-  background-color: rgba(210, 144, 250, 0.4);
+  background-color: rgba(210, 144, 250);
 }
 
 .list-items {

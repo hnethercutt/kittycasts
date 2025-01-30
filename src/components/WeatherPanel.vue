@@ -53,23 +53,27 @@ function createIcon(iconLocation) {
 </script>
 
 <template>
+  <!--Both current and air-container panels-->
   <div class="weather-container">
+    <!--Holds both sections within the current panel-->
     <div class="current-container">
       <div class="location">{{ city && state ? city + ", " + state : city || state }}</div>
-      <div class="temp-container">
-        <div class="current">
+      <!--Section 1-->
+      <div class="current-details">
+        <div class="conditions">
           <div class="current-temp">{{ currentTemp ? currentTemp + "°" : currentTemp }}</div>
           <div class="condition">{{ condition }}</div>
           <div id="icon"></div>
         </div>
+      <!--Section 2-->
       <div class="temp-details">  
         <div class="feels-like">{{ feelsLike ? "Feels Like: " + feelsLike + "°" : feelsLike }}</div>
         <div>{{ high ? "High: " + high + "°" : high }}</div>
         <div>{{ low ? "Low: " + low + "°" : low }}</div>
       </div>
     </div>
-    </div>
-    <div class="air">
+  </div>
+    <div class="air-container">
       <div>
         {{ wind ? "Wind: " + wind + " mph" : wind }}
       </div>
@@ -79,19 +83,13 @@ function createIcon(iconLocation) {
       <div>
         {{ humidity ? "Humidity: " + humidity + "%" : humidity }}
       </div>
+    </div>
   </div>
-</div>
 </template>
 
 <style>
-.weather-icon {
-  height: 75px;
-  margin-top: 5px;
-}
-
-.temp-container {
-  display: flex;
-  gap: 2em;
+.weather-container {
+  margin: 10px;
 }
 
 .current-container {
@@ -111,18 +109,32 @@ function createIcon(iconLocation) {
   margin-top: 5px;
 }
 
-.current {
+.current-details {
+  display: flex;
+  gap: 2em;
+}
+
+.conditions {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .current-temp {
   color: rgb(24, 50, 117);
   font-size: 46px;
 }
 
-.temp-details {
+.condition {
+  font-size: 26px;
+}
 
+.weather-icon {
+  height: 75px;
+  margin-top: 5px;
+}
+
+.temp-details {
   font-size: 18px;
   margin-top: 40px;
 }
@@ -131,26 +143,19 @@ function createIcon(iconLocation) {
   font-size: 20px;
 }
 
-.condition {
-  font-size: 26px;
-}
-
-.air {
-  align-items: center;
-  background-color: rgba(198, 230, 255, 0.9);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  font-size: 20px;
+.air-container {
   height: 80px;
-  justify-content: center;
   width: 300px;
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  background-color: rgba(198, 230, 255, 0.9);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.weather-container {
-  margin: 5px;
-}
 
 @media screen and (min-width: 480px) {
   .weather-container {
@@ -161,7 +166,7 @@ function createIcon(iconLocation) {
     width: 300px;
   }
 
-  .air {
+  .air-container {
     width: 150px;
     height: 200px;
     margin-top: 0;
@@ -171,48 +176,61 @@ function createIcon(iconLocation) {
 }
 
 @media screen and (min-width: 768px) {
+  .location {
+    font-size: 30px;
+  }
+
   .current-container {
     width: 350px;
     height: 250px;
   }
 
-  .air {
+  .condition {
+    font-size: 28px;
+  }
+
+  .air-container {
     width: 175px;
     height: 250px;
     gap: 30px;
     font-size: 24px;
   }
 
+  .temp-details {
+  
+    font-size: 24px;
+    margin-top: 40px;
+  }
+  
+  .feels-like {
+    font-size: 24px;
+  }
+
   .current-temp {
   font-size: 72px;
-}
-
-.temp-details {
-
-  font-size: 24px;
-  margin-top: 40px;
-}
-
-.feels-like {
-  font-size: 24px;
-}
-
-.condition {
-  font-size: 26px;
-}
-
-.location {
-  font-size: 30px;
-}
+  }
 }
 
 @media screen and (min-width: 1025px) {
+  .weather-container {
+    margin-top: 20px;
+  }
+
+  .location {
+    margin-top: 10px;
+  }
+
   .current-container {
     width: 400px;
     margin-bottom: 10px;
   }
 
-  .air {
+  .weather-icon {
+    height: 100px;
+    margin-top: 0;
+  }
+
+  .air-container {
     width: 200px;
     height: 250px;
     font-size: 28px;

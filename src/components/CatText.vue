@@ -134,36 +134,40 @@ watch(
 </script>
 
 <template>
-  <div id="textBox" class="text-box">Meow! Search for your city to get the weather. Customize me if you'd like!</div>
+  <div id="textBox" class="text-box">Meow! Search for your city to get the weather!</div>
 </template>
 
 <style>
 .text-box {
+  width: 280px;
+  height: 50px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 400;
+  font-size: 18px;
   background-color: rgba(0, 0, 0, 0.8);
   border: 3px solid rgba(255, 255, 255, 0.8);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
     0px 4px 4px rgba(0, 0, 0, 0.25) inset;
   color: #fff;
-  display: flex;
-  justify-content: center;
-  font-family: "Share Tech Mono", monospace;
-  font-weight: 400;
-  font-size: 18px;
-  align-items: center;
-  margin-top: 20px;
-  text-align: center;
-  width: 280px;
 }
 
 @media screen and (min-width: 480px) {
   .text-box {
     width: 300px;
+    height: 70px;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .text-box {
-    width: 350px;
+    width: 375px;
+    height: 100px;
+    font-size: 20px;
   }
 }
 

@@ -35,16 +35,17 @@ onMounted(() => {
   });
 });
 
+// Toggle customization menu
 function showCustom()
 {
-  document.getElementById("wrapper").style.display = "block";
+  document.getElementById("customBox").style.display = "block";
   document.getElementById("customButton").style.display = "none";
   document.getElementById("closeButton").style.display = "block";
 }
 
 function closeCustom()
 {
-  document.getElementById("wrapper").style.display = "none";
+  document.getElementById("customBox").style.display = "none";
   document.getElementById("closeButton").style.display = "none";
   document.getElementById("customButton").style.display = "block";
 }
@@ -52,36 +53,44 @@ function closeCustom()
 </script>
 
 <template>
-  <div class="yep">
-  <div class="window-container">
+  <!--Both the cat box and the customization box-->
+  <div class="cat-box-container">
+  <!--The entire cat box-->
+  <div class="cat-box">
     <button id="customButton" class="custom-button" @click="showCustom()">Click Here to Customize!</button>
     <button id="closeButton" class="close-button" @click="closeCustom()">Click Here to Finish Customizing!</button>
-    <div class="cat-box">
-      <!--Placeholder cat-->
-      <div class="cat">
-        <img
-          id="eyeColor"
-          class="eye-color"
-          src="/src/assets/images/eyes/pink.png"
-        />
-        <img
-          id="furColor"
-          class="fur-color"
-          src="/src/assets/images/fur/grey-tabby.png"
-        />
-        <img
-          id="blush"
-          class="blush"
-          src="/src/assets/images/blush/blush1.png"
-        />
-        <img id="teeth" class="teeth" src="/src/assets/images/teeth/two.png" />
-      </div>
+      <!--Just the box for the cat-->
+      <div class="box">
+      <!--The cat itself-->
+        <div class="cat">
+          <img
+            id="eyeColor"
+            class="eye-color"
+            src="/src/assets/images/eyes/pink.png"
+          />
+          <img
+            id="furColor"
+            class="fur-color"
+            src="/src/assets/images/fur/grey-tabby.png"
+          />
+          <img
+            id="blush"
+            class="blush"
+            src="/src/assets/images/blush/blush1.png"
+          />
+          <img id="teeth" class="teeth" src="/src/assets/images/teeth/two.png" />
+        </div>
       <CatText :condition="condition"/>
     </div>
   </div>
-  <div class="wrapper" id="wrapper">
-  <div class="customize-container">
+
+  <!--The entire customization box-->
+  <div class="customize-box" id="customBox">
+    <!--Just the part of the box where the options are-->
+    <div class="customize-section">
+    <!--Surrounds just the customize-section-->
     <div class="customize-border"></div>
+    <!--The tabs and buttons-->
     <div class="customize">
       <input id="fur-tab" type="radio" name="customize" checked="checked" />
       <label class="custom-label" for="fur-tab">Fur</label>
@@ -123,50 +132,29 @@ function closeCustom()
         <button class="blush-button" id="blush1"></button>
         <button class="blush-button" id="blush2"></button>
       </div>
+      <!--For display purposes/shape of the "folder"-->
       <div class="line"></div>
     </div>
-  </div>
+    </div>
 </div>
 </div>
 </template>
 
 <style>
+.cat-box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cat-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .close-button {
   display: none;
-}
-
-.yep {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.teeth {
-  height: 300px;
-  position: absolute;
-}
-
-.cat {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 90px;
-}
-
-.blush {
-  height: 300px;
-  position: absolute;
-}
-
-.eye-color {
-  height: 300px;
-  position: absolute;
-}
-
-.window-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .custom-button,
@@ -189,7 +177,7 @@ function closeCustom()
   cursor: pointer;
 }
 
-.cat-box {
+.box {
   align-items: center;
   border: 3px solid rgba(0, 0, 0);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -201,9 +189,102 @@ function closeCustom()
   pointer-events: none;
 }
 
+.cat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.eye-color {
+  height: 300px;
+  position: absolute;
+}
+
 .fur-color {
   height: 300px;
   position: absolute;
+}
+
+.blush {
+  height: 300px;
+  position: absolute;
+}
+
+.teeth {
+  height: 300px;
+  position: absolute;
+}
+
+.customize-box {
+  display: none;
+  margin: 10px;
+}
+
+.customize-section {
+  background-image: linear-gradient(
+    transparent 6%,
+    rgba(126, 197, 255, 0.9)7%
+  );
+  box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px -4px rgba(0, 0, 0, 0.25);
+  height: 650px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 300px;
+  position: relative;
+}
+
+.customize-border {
+  height: 608px;
+  width: 99.9%;
+  position: absolute;
+  border: 3px solid rgb(0, 0, 0);
+  border-top: none;
+  top: 45px;
+  right: 0.2px;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.customize {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+}
+
+.line {
+  border-bottom: 3px solid black;
+  width: 38px;
+}
+
+input[type="radio"],
+.options {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  background-color: rgba(126, 197, 255, 0.9);
+  border-bottom: none;
+}
+
+input[type="radio"]:checked + label + .options {
+  display: block;
+}
+
+.custom-label {
+  background-color: rgba(159, 232, 250, 0.7);
+  padding: 0.7em 1em;
+  cursor: pointer;
+  border: 3px solid rgba(0, 0, 0, 0.75);
+  border-radius: 20px 20px 0px 0px;
+}
+
+.options {
+  order: 1;
+  display: flex;
+  width: 300px;
+  padding-left: 20px;
 }
 
 .fur-button,
@@ -339,100 +420,9 @@ function closeCustom()
   background-size: 200px;
 }
 
-.wrapper {
-  display: none;
-  margin: 10px;
-}
-
-.customize-container {
-  background-image: linear-gradient(
-    transparent 6%,
-    rgba(126, 197, 255, 0.9)7%
-  );
-  box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.25),
-    0px 4px 4px -4px rgba(0, 0, 0, 0.25);
-  height: 650px;
-  padding-left: 0;
-  padding-right: 0;
-  width: 300px;
-  position: relative;
-}
-
-.customize-border {
-  height: 608px;
-  width: 99.9%;
-  position: absolute;
-  border: 3px solid rgb(0, 0, 0);
-  border-top: none;
-  top: 45px;
-  right: 0.2px;
-  box-sizing: border-box;
-  pointer-events: none;
-}
-
-.line {
-  border-bottom: 3px solid black;
-  width: 38px;
-}
-
-.customize {
-  display: flex;
-  flex-wrap: wrap;
-  width: 400px;
-}
-
-.custom-label {
-  background-color: rgba(159, 232, 250, 0.7);
-  padding: 0.7em 1em;
-  cursor: pointer;
-  border: 3px solid rgba(0, 0, 0, 0.75);
-  border-radius: 20px 20px 0px 0px;
-}
-
-.options {
-  order: 1;
-  display: flex;
-  width: 300px;
-  padding-left: 20px;
-  
-}
-
-input[type="radio"],
-.options {
-  display: none;
-}
-
-input[type="radio"]:checked + label {
-  background-color: rgba(126, 197, 255, 0.9);
-  border-bottom: none;
-}
-
-input[type="radio"]:checked + label + .options {
-  display: block;
-}
 
 @media screen and (min-width: 480px) {
-  .eye-color {
-    height: 350px;
-  }
-
-  .fur-color {
-    height: 350px;
-  }
-
-  .eye-color {
-    height: 350px;
-  }
-
-  .teeth {
-    height: 350px;
-  }
-
-  .blush {
-    height: 350px;
-  }
-
-  .cat-box {
+  .box {
     height: 350px;
     width: 350px;
     gap: 145px;
@@ -445,90 +435,86 @@ input[type="radio"]:checked + label + .options {
   .options {
   width: 400px;
   padding-left: 10px;
-}
+  }
 
-.customize-container {
-  height: 430px;
-  width: 400px;
-  background-image: linear-gradient(
-    transparent 8%,
-    rgba(126, 197, 255, 0.9)8%
-  );
-}
+  .eye-color,
+  .fur-color,
+  .blush,
+  .teeth {
+    height: 350px;
+  }
 
-.customize-border {
-  height: 387px;
-}
+  .customize-section {
+    height: 430px;
+    width: 400px;
+    background-image: linear-gradient(
+      transparent 11%,
+      rgba(126, 197, 255, 0.9)8%
+    );
+  }
 
-.line {
-  width: 135px;
-}
+  .customize-border {
+    height: 387px;
+  }
 
-.wrapper {
-  margin: 20px;
-}
+  .line {
+    width: 135px;
+  }
 
+  .customize-box {
+    margin: 10px;
+  }
+
+  .custom-button,
+  .close-button {
+    height: 30px;
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 768px) 
 {
-  .yep {
-  flex-direction: row;
-  justify-content: center;
+  .cat-box-container {
+    flex-direction: row;
+    justify-content: center;
   }
 
-  .customize-container {
-  background-image: linear-gradient(
-    transparent 10%,
-    rgba(126, 197, 255, 0.9)10%
-  );
-}
+  .box {
+    height: 400px;
+    gap: 160px;
+  }
+  
+  .cat {
+    margin-top: 125px;
+  }
 
-.cat-box {
-  height: 400px;
-  gap: 160px;
-}
-
-.cat {
-  margin-top: 125px;
-}
+  .customize-section {
+    background-image: linear-gradient(
+      transparent 10%,
+      rgba(126, 197, 255, 0.9)10%
+    );
+  }
 }
 
 @media screen and (min-width: 1025px) 
 {
-  .eye-color {
-    height: 400px;
-  }
-
-  .fur-color {
-    height: 400px;
-  }
-
-  .eye-color {
-    height: 400px;
-  }
-
-  .teeth {
-    height: 400px;
-  }
-
-  .blush {
-    height: 400px;
-  }
-
-  .cat-box {
+  .box {
     height: 450px;
     width: 450px;
     gap: 175px;
   }
 
-  .window-top {
-    height: 30px;
+  .eye-color,
+  .fur-color,
+  .blush,
+  .teeth {
+    height: 400px;
   }
 
-  .wrapper {
-    margin-top: 85px;
+  .custom-button,
+  .close-button {
+    height: 40px;
+    font-size: 22px;
   }
-
 }
 </style>

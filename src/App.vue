@@ -41,12 +41,12 @@ function handleWeatherData(data) {
 <div class="search-stuff">
 <Search @weather-data="handleWeatherData" />
 </div>
+<div class="cat-stuff">
+  <CatBox v-bind="weatherData"/>
+  </div>
 <div class="container">
   <div class="weather-stuff">
   <WeatherPanel v-bind="weatherData" />
-  </div>
-  <div class="cat-stuff">
-  <CatBox v-bind="weatherData"/>
   </div>
   <p>© 2025 Hannah Nethercutt</p>
 </div>
@@ -143,11 +143,6 @@ p {
   margin-left: auto;
 }
 
-.search-stuff {
-  display: flex;
-  justify-content: center;
-}
-
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -161,6 +156,10 @@ p {
   background-color: rgba(255, 255, 255, 0.03);
 }
 
+.search-stuff {
+  display: flex;
+  justify-content: center;
+}
 
 @media screen and (min-width: 480px) {
   .title {
@@ -210,10 +209,6 @@ p {
   .theme-text {
       display: none;
   }
-}
-
-@media screen and (min-width: 1025px) 
-{
 }
 
 </style>
