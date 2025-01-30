@@ -282,7 +282,7 @@ function closeCustom()
 }
 
 .customize-section {
-  background-image: linear-gradient(
+  background-image: --moz-linear-gradient(
     transparent 6%,
     rgba(126, 197, 255, 0.9)7%
   );
@@ -448,7 +448,7 @@ input[type="radio"]:checked + .custom-label + .options {
   .customize-section {
     height: 430px;
     width: 400px;
-    background-image: linear-gradient(
+    background-image: --moz-linear-gradient(
       transparent 11%,
       rgba(126, 197, 255, 0.9)8%
     );
@@ -490,7 +490,7 @@ input[type="radio"]:checked + .custom-label + .options {
   }
 
   .customize-section {
-    background-image: linear-gradient(
+    background-image: --moz-linear-gradient(
       transparent 10%,
       rgba(126, 197, 255, 0.9)10%
     );
