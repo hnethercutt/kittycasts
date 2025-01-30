@@ -9,31 +9,31 @@ const props = defineProps({
 const {
   condition
 } = toRefs(props);
-onMounted(() => {
-  let btns = document.querySelectorAll("button");
-  const fur = document.getElementById("furColor");
-  const eyes = document.getElementById("eyeColor");
-  const teeth = document.getElementById("teeth");
-  const blush = document.getElementById("blush");
+// onMounted(() => {
+//   let btns = document.querySelectorAll("button");
+//   const fur = document.getElementById("furColor");
+//   const eyes = document.getElementById("eyeColor");
+//   const teeth = document.getElementById("teeth");
+//   const blush = document.getElementById("blush");
 
-  // When any customization button is clicked, updates the cat image
-  btns.forEach(function (i) {
-    i.addEventListener("click", function () {
-      const id = i.getAttribute("id");
-      const cl = i.className;
+//   // When any customization button is clicked, updates the cat image
+//   btns.forEach(function (i) {
+//     i.addEventListener("click", function () {
+//       const id = i.getAttribute("id");
+//       const cl = i.className;
 
-      if (cl == "fur-button") {
-        fur.src = "/src/assets/images/fur/" + id + ".png";
-      } else if (cl == "eyes-button") {
-        eyes.src = "/src/assets/images/eyes/" + id + ".png";
-      } else if (cl == "teeth-button") {
-        teeth.src = "/src/assets/images/teeth/" + id + ".png";
-      } else if (cl == "blush-button") {
-        blush.src = "/src/assets/images/blush/" + id + ".png";
-      }
-    });
-  });
-});
+//       if (cl == "fur-button") {
+//         fur.src = "/src/assets/images/fur/" + id + ".png";
+//       } else if (cl == "eyes-button") {
+//         eyes.src = "/src/assets/images/eyes/" + id + ".png";
+//       } else if (cl == "teeth-button") {
+//         teeth.src = "/src/assets/images/teeth/" + id + ".png";
+//       } else if (cl == "blush-button") {
+//         blush.src = "/src/assets/images/blush/" + id + ".png";
+//       }
+//     });
+//   });
+// });
 
 // Toggle customization menu
 function showCustom()
@@ -222,6 +222,20 @@ function closeCustom()
   margin: 10px;
 }
 
+.customize-section {
+  background-image: linear-gradient(
+    transparent 6%,
+    rgba(126, 197, 255, 0.9)7%
+  );
+  box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px -4px rgba(0, 0, 0, 0.25);
+  height: 650px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 300px;
+  position: relative;
+}
+
 .customize-border {
   height: 608px;
   width: 99.9%;
@@ -279,20 +293,6 @@ function closeCustom()
 .teeth-button:hover,
 .blush-button:hover {
   background-color: rgba(255, 255, 255, 0.5);
-}
-
-.customize-section {
-  background-image: linear-gradient(
-    transparent 6%,
-    rgba(126, 197, 255, 0.9)7%
-  );
-  box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.25),
-    0px 4px 4px -4px rgba(0, 0, 0, 0.25);
-  height: 650px;
-  padding-left: 0;
-  padding-right: 0;
-  width: 300px;
-  position: relative;
 }
 
 input[type="radio"],
@@ -475,11 +475,6 @@ input[type="radio"]:checked + .custom-label + .options {
 
 @media screen and (min-width: 768px) 
 {
-  .cat-box-container {
-    flex-direction: row;
-    justify-content: center;
-  }
-
   .box {
     height: 400px;
     gap: 160px;

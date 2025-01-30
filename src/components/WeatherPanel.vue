@@ -88,10 +88,6 @@ function createIcon(iconLocation) {
 </template>
 
 <style>
-.weather-container {
-  margin: 10px;
-}
-
 .current-container {
   align-items: center;
   background-color: rgba(252, 230, 188, 0.9);
@@ -106,7 +102,7 @@ function createIcon(iconLocation) {
 .location {
   font-size: 24px;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .current-details {
@@ -176,6 +172,10 @@ function createIcon(iconLocation) {
 }
 
 @media screen and (min-width: 768px) {
+  .weather-container {
+    flex-direction: column;
+  }
+  
   .location {
     font-size: 30px;
   }
@@ -190,8 +190,10 @@ function createIcon(iconLocation) {
   }
 
   .air-container {
-    width: 175px;
-    height: 250px;
+    width: 350px;
+    height: 180px;
+    margin-left: 0;
+    margin-top: 10px;
     gap: 30px;
     font-size: 24px;
   }
@@ -212,17 +214,14 @@ function createIcon(iconLocation) {
 }
 
 @media screen and (min-width: 1025px) {
-  .weather-container {
-    margin-top: 20px;
-  }
-
-  .location {
-    margin-top: 10px;
-  }
-
   .current-container {
     width: 400px;
+    height: 300px;
     margin-bottom: 10px;
+  }
+
+  .condition {
+    font-size: 32px;
   }
 
   .weather-icon {
@@ -230,11 +229,22 @@ function createIcon(iconLocation) {
     margin-top: 0;
   }
 
-  .air-container {
-    width: 200px;
-    height: 250px;
+  .temp-details {
     font-size: 28px;
-    text-align: center;
+    margin-top: 70px;
+  }
+
+  .feels-like {
+    font-size: 28px;
+  }
+
+  .current-temp {
+    font-size: 84px;
+  }
+
+  .air-container {
+    width: 400px;
+    font-size: 26px;
   }
 }
 </style>
