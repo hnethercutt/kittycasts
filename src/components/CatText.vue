@@ -39,7 +39,7 @@ watch(
         break;
 
       case "Sunny":
-        txt = "Purr-fect weather for sunbathing!";
+        txt = "Purr! The sun is shining bright today!";
         break;
 
       case "Clear":
