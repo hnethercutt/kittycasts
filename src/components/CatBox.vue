@@ -308,6 +308,7 @@ function closeCustom()
 
 .options {
   width: 300px;
+  height: 615px;
   padding-left: 20px;
   padding-bottom: 10px;
   background-color: 
@@ -481,8 +482,9 @@ input[type="radio"]:checked + .custom-label + .options {
   }
 
   .options {
-  width: 400px;
-  padding-left: 10px;
+    width: 400px;
+    height: 370px;
+    padding-left: 10px;
   }
 
   .eye-color,
