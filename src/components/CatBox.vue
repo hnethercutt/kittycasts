@@ -258,20 +258,6 @@ function closeCustom()
   width: 38px;
 }
 
-input[type="radio"],
-.options {
-  display: none;
-}
-
-input[type="radio"]:checked + label {
-  background-color: rgba(126, 197, 255, 0.9);
-  border-bottom: none;
-}
-
-input[type="radio"]:checked + label + .options {
-  display: block;
-}
-
 .custom-label {
   background-color: rgba(159, 232, 250, 0.7);
   padding: 0.7em 1em;
@@ -306,6 +292,20 @@ input[type="radio"]:checked + label + .options {
 .teeth-button:hover,
 .blush-button:hover {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+input[type="radio"],
+.options {
+  display: none;
+}
+
+input[type="radio"]:checked + .custom-label {
+  background-color: rgba(126, 197, 255, 0.9);
+  border-bottom: none;
+}
+
+input[type="radio"]:checked + .custom-label + .options {
+  display: block;
 }
 
 #aqua {
