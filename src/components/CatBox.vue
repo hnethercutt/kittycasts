@@ -9,31 +9,32 @@ const props = defineProps({
 const {
   condition
 } = toRefs(props);
-// onMounted(() => {
-//   let btns = document.querySelectorAll("button");
-//   const fur = document.getElementById("furColor");
-//   const eyes = document.getElementById("eyeColor");
-//   const teeth = document.getElementById("teeth");
-//   const blush = document.getElementById("blush");
 
-//   // When any customization button is clicked, updates the cat image
-//   btns.forEach(function (i) {
-//     i.addEventListener("click", function () {
-//       const id = i.getAttribute("id");
-//       const cl = i.className;
+onMounted(() => {
+  let btns = document.querySelectorAll("button");
+  const fur = document.getElementById("furColor");
+  const eyes = document.getElementById("eyeColor");
+  const teeth = document.getElementById("teeth");
+  const blush = document.getElementById("blush");
 
-//       if (cl == "fur-button") {
-//         fur.src = "/src/assets/images/fur/" + id + ".png";
-//       } else if (cl == "eyes-button") {
-//         eyes.src = "/src/assets/images/eyes/" + id + ".png";
-//       } else if (cl == "teeth-button") {
-//         teeth.src = "/src/assets/images/teeth/" + id + ".png";
-//       } else if (cl == "blush-button") {
-//         blush.src = "/src/assets/images/blush/" + id + ".png";
-//       }
-//     });
-//   });
-// });
+  // When any customization button is clicked, updates the cat image
+  btns.forEach(function (i) {
+    i.addEventListener("click", function () {
+      const id = i.getAttribute("id");
+      const cl = i.className;
+
+      if (cl == "fur-button") {
+        fur.src = "/src/assets/images/fur/" + id + ".png";
+      } else if (cl == "eyes-button") {
+        eyes.src = "/src/assets/images/eyes/" + id + ".png";
+      } else if (cl == "teeth-button") {
+        teeth.src = "/src/assets/images/teeth/" + id + ".png";
+      } else if (cl == "blush-button") {
+        blush.src = "/src/assets/images/blush/" + id + ".png";
+      }
+    });
+  });
+});
 
 // Toggle customization menu
 function showCustom()
