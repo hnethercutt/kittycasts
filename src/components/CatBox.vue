@@ -175,6 +175,7 @@ function closeCustom()
   font-family: "Chela One", system-ui;
   font-size: 16px;
   cursor: pointer;
+  color: #000;
 }
 
 .box {
@@ -219,20 +220,6 @@ function closeCustom()
 .customize-box {
   display: none;
   margin: 10px;
-}
-
-.customize-section {
-  background-image: linear-gradient(
-    transparent 6%,
-    rgba(126, 197, 255, 0.9)7%
-  );
-  box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.25),
-    0px 4px 4px -4px rgba(0, 0, 0, 0.25);
-  height: 650px;
-  padding-left: 0;
-  padding-right: 0;
-  width: 300px;
-  position: relative;
 }
 
 .customize-border {
@@ -292,6 +279,20 @@ function closeCustom()
 .teeth-button:hover,
 .blush-button:hover {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.customize-section {
+  background-image: linear-gradient(
+    transparent 6%,
+    rgba(126, 197, 255, 0.9)7%
+  );
+  box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px -4px rgba(0, 0, 0, 0.25);
+  height: 650px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 300px;
+  position: relative;
 }
 
 input[type="radio"],
