@@ -45,7 +45,7 @@ body {
   }
 
   .search-bar {
-    border-color: rgb(255, 255, 255, 0.5);
+    border-color: rgb(129, 128, 128, 0.5);
   }
 
   .search-button {
@@ -55,35 +55,37 @@ body {
   .list-0:hover,
   .list-1:hover,
   .list-2:hover {
-      background-color: rgba(165, 95, 15, 0.4);
+    background-color: rgba(165, 95, 15, 0.4);
   }
 
   .current-container {
-      background-color: rgba(10, 8, 38, 0.7);
+    background-color: rgba(22, 34, 99, 0.365);
   }
 
   .current-temp {
     color: rgb(241, 158, 225);
   }
 
-  .air {
-    background-color: rgba(39, 20, 45, 0.7);
+  .air-container {
+    background-color: rgba(117, 126, 196, 0.484);
   }
 
-  .window-top {
+  .custom-button,
+  .close-button {
     background: linear-gradient(
     90deg,
     rgb(3, 3, 63),
     rgb(37, 2, 86),
     rgb(82, 2, 98),
     rgb(109, 56, 2));
-    border-left: 3px solid rgb(255, 255, 255, 0.5);
-    border-right: 3px solid rgb(255, 255, 255, 0.5);
-    border-top: 3px solid rgb(255, 255, 255, 0.5);
+    border-left: 3px solid rgb(129, 128, 128, 0.5);
+    border-right: 3px solid rgb(129, 128, 128, 0.5);
+    border-top: 3px solid rgb(129, 128, 128, 0.5);
+    color: #fff;
   }
 
   .cat-box {
-    border: 3px solid rgb(255, 255, 255, 0.5);
+    border: 3px solid rgba(129, 128, 128, 0.5);
   }
 
   .text-box {
@@ -92,25 +94,16 @@ body {
     color: #fff;
   }
 
-  .customize-container {
-    background-image: linear-gradient(transparent 11%,
-                    rgba(247, 124, 222, 0.2) 11%);
-  }
-  .customize-border {
-    border: 3px solid rgb(255, 255, 255, 0.5);
+  .options {
+    background-color: rgba(247, 124, 222, 0.3);
   }
 
   .custom-label {
     background-color: rgba(247, 124, 222, 0.5);
-    border: 3px solid rgb(255, 255, 255, 0.5);
-  }
-
-  .line {
-    border-bottom: 3px solid rgb(255, 255, 255, 0.5);
-    width: 135px;
+    border: none;
   }
 
   input[type="radio"]:checked + label {
-    background-color: rgba(247, 124, 222, 0.2);
+    background-color: rgba(247, 124, 222, 0.3);
   }
 }

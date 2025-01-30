@@ -167,7 +167,6 @@ function closeCustom()
   border-top: 3px solid rgba(0, 0, 0, 0.8);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 25px;
-  margin-top: 10px;
   font-family: "Chela One", system-ui;
   font-size: 16px;
   cursor: pointer;
@@ -234,11 +233,12 @@ function closeCustom()
 }
 
 .custom-label {
-  background-color: rgba(159, 232, 250, 0.7);
+  background-color: rgba(126, 197, 255, 0.7);
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 0.7em 1em;
   cursor: pointer;
   border-radius: 20px 20px 0px 0px;
+  border: transparent;
 }
 
 .options {
