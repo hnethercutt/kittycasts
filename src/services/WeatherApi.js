@@ -1,6 +1,5 @@
 const url = "https://api.weatherapi.com/v1/";
-/* API key from weatherapi.com 
-const key = "your API key"; */
+const API_KEY = ""; 
 
 /**
  * Fetches city information based on the provided input
@@ -16,7 +15,7 @@ export async function fetchCity(input) {
   }
 
   const endpoint = "search.json";
-  const query = `key=${key}&q=${input}&aqi=n`;
+  const query = `key=${API_KEY}&q=${input}&aqi=n`;
   const api = `${url}${endpoint}?${query}`;
 
   try {
@@ -42,7 +41,7 @@ export async function fetchWeather(location) {
   }
 
   const endpoint = "forecast.json";
-  const query = `key=${key}&q=${location}&aqi=n`;
+  const query = `key=${API_KEY}&q=${location}&aqi=n`;
   const api = `${url}${endpoint}?${query}`;
 
   try {
@@ -50,6 +49,7 @@ export async function fetchWeather(location) {
     const data = await response.json();
     console.log(data);
 
+    
     // Updates prop in WeatherPanel
     return {
       city: data.location.name,
