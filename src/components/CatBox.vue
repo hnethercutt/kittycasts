@@ -526,6 +526,10 @@ input[type="radio"]:checked + .custom-label + .options {
 
 @media screen and (min-width: 1025px) 
 {
+  .cat-box-container {
+    flex-direction: row;
+  }
+  
   .box {
     height: 450px;
     width: 450px;
@@ -545,4 +549,12 @@ input[type="radio"]:checked + .custom-label + .options {
     font-size: 22px;
   }
 }
+
+@media screen and (min-width: 1400px)
+{
+  .cat-box-container {
+    flex-direction: row;
+  }
+}
+
 </style>
