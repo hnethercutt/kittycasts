@@ -87,11 +87,9 @@ function closeCustom()
   <!--The entire customization box-->
   <div class="customize-box" id="customBox">
     <!--Just the part of the box where the options are-->
-    <div class="customize-section">
-    <!--Surrounds just the customize-section-->
-    <div class="customize-border"></div>
-    <!--The tabs and buttons-->
     <div class="customize">
+    <!--The tabs and buttons-->
+    <div class="customize-sections">
       <input id="fur-tab" type="radio" name="customize" checked="checked" />
       <label class="custom-label" for="fur-tab">Fur</label>
       <div class="options">
@@ -132,8 +130,6 @@ function closeCustom()
         <button class="blush-button" id="blush1"></button>
         <button class="blush-button" id="blush2"></button>
       </div>
-      <!--For display purposes/shape of the "folder"-->
-      <div class="line"></div>
     </div>
     </div>
 </div>
@@ -181,7 +177,7 @@ function closeCustom()
 .box {
   align-items: center;
   border: 3px solid rgba(0, 0, 0);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   height: 300px;
@@ -222,56 +218,37 @@ function closeCustom()
   margin: 10px;
 }
 
-.customize-section {
-  background-image: linear-gradient(
-    transparent 6%,
-    rgba(126, 197, 255, 0.9)7%
-  );
+.customize {
   box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.25),
     0px 4px 4px -4px rgba(0, 0, 0, 0.25);
   height: 650px;
-  padding-left: 0;
-  padding-right: 0;
   width: 300px;
   position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.customize-border {
-  height: 608px;
-  width: 99.9%;
-  position: absolute;
-  border: 3px solid rgb(0, 0, 0);
-  border-top: none;
-  top: 45px;
-  right: 0.2px;
-  box-sizing: border-box;
-  pointer-events: none;
-}
-
-.customize {
+.customize-sections {
   display: flex;
   flex-wrap: wrap;
-  width: 400px;
-}
-
-.line {
-  border-bottom: 3px solid black;
-  width: 38px;
 }
 
 .custom-label {
   background-color: rgba(159, 232, 250, 0.7);
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 0.7em 1em;
   cursor: pointer;
-  border: 3px solid rgba(0, 0, 0, 0.75);
   border-radius: 20px 20px 0px 0px;
 }
 
 .options {
-  order: 1;
-  display: flex;
   width: 300px;
   padding-left: 20px;
+  padding-bottom: 10px;
+  background-color: 
+  rgba(126, 197, 255, 0.9);
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  order: 1;
 }
 
 .fur-button,
@@ -293,6 +270,11 @@ function closeCustom()
 .teeth-button:hover,
 .blush-button:hover {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.line {
+  border-bottom: 100px solid black;
+  width: 38px;
 }
 
 input[type="radio"],
@@ -445,17 +427,9 @@ input[type="radio"]:checked + .custom-label + .options {
     height: 350px;
   }
 
-  .customize-section {
-    height: 430px;
+  .customize {
+    height: 400px;
     width: 400px;
-    background-image: linear-gradient(
-      transparent 11%,
-      rgba(126, 197, 255, 0.9)8%
-    );
-  }
-
-  .customize-border {
-    height: 387px;
   }
 
   .line {
@@ -482,13 +456,6 @@ input[type="radio"]:checked + .custom-label + .options {
   
   .cat {
     margin-top: 125px;
-  }
-
-  .customize-section {
-    background-image: linear-gradient(
-      transparent 10%,
-      rgba(126, 197, 255, 0.9)10%
-    );
   }
 }
 

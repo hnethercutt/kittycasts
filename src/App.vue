@@ -146,7 +146,6 @@ p {
 
 .container {
   width: auto;
-  height: fit-content;
   padding: 5px;
   display: flex;
   flex-direction: column;

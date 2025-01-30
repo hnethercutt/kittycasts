@@ -91,7 +91,7 @@ function createIcon(iconLocation) {
 .current-container {
   align-items: center;
   background-color: rgba(252, 230, 188, 0.9);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   height: 200px;
@@ -149,7 +149,7 @@ function createIcon(iconLocation) {
   align-items: center;
   font-size: 20px;
   background-color: rgba(198, 230, 255, 0.9);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
