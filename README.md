@@ -38,7 +38,7 @@ There were also a couple things I noticed weren't featured in other beginner app
 
 So, I took my ideas, spent a ton of time drawing (never doing that again), spent even longer teaching myself JavaScript, CSS and Vue, as well as furthering the knowledge I did have of HTML, and voila! kittycaSts was created! 😺
 
-### Preview at [kittycaSts.com](https://www.kittycasts.com)
+### View at [kittycasts.com](https://www.kittycasts.com)
 ### Built With
 
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -92,41 +92,45 @@ npm run dev
 <!--USAGE EXAMPLES/SCREENSHOTS-->
 ## Screenshots
 
-**Note:** I have not finished making the application responsive. Thus, it may look different for you depending on your screen size.
-<br />
-<br />
-
 <p align="center">
   <b>The page when it initially loads</b>
   <br />
   <br />
-  <img width="1277" alt="Screenshot 2025-01-22 161514" src="https://github.com/user-attachments/assets/00410ce1-25f2-4b8f-a451-b8c31e9e737f" /> 
-  <img width="1275" alt="Screenshot 2025-01-22 213439" src="https://github.com/user-attachments/assets/f4c9b200-4528-45dd-86b3-44702d74efa2" />
+  <img width="1274" alt="Screenshot 2025-01-30 135927" src="https://github.com/user-attachments/assets/a8450873-f192-463d-8b87-cb980e976803" />
+  <img width="1273" alt="Screenshot 2025-01-30 140009" src="https://github.com/user-attachments/assets/e80fcc3c-43f9-4049-9e46-ad6d452b44ed" />
 </p>
 
 <p align="center">
   <b>The autocomplete search bar</b>
   <br />
   <br />
-  <img width="371" alt="search" src="https://github.com/user-attachments/assets/33cf375c-ff50-43f8-95e0-0b5eb0036a6b" />
-  <img width="370" alt="Screenshot 2025-01-22 214010" src="https://github.com/user-attachments/assets/06506916-4c8f-465b-ae1f-64c151687d28" />
+  <img width="343" alt="Screenshot 2025-01-30 140027" src="https://github.com/user-attachments/assets/8cdd4516-1a87-4f06-b30a-a9ddd8f374d5" />
+  <img width="343" alt="Screenshot 2025-01-30 140057" src="https://github.com/user-attachments/assets/7e287a01-ae85-447a-ad17-76c92c05bf21" />
 </p>
 
 <p align="center">
   <b>An example of weather data and the cat's text box (The text is animated)</b>
   <br />
   <br />
-  <img width="856" alt="panel" src="https://github.com/user-attachments/assets/11949502-f703-44c1-a14f-5e10c801edff" />
-  <img width="857" alt="Screenshot 2025-01-22 214101" src="https://github.com/user-attachments/assets/6ffe2f33-ba0b-4d21-8306-6267549b5a42" />
+<img width="679" alt="Screenshot 2025-01-30 140122" src="https://github.com/user-attachments/assets/6cfa40ff-5f94-476f-89eb-fbb8cd382f80" />
+<img width="704" alt="Screenshot 2025-01-30 140148" src="https://github.com/user-attachments/assets/5bf3217b-38b9-47fa-8f33-fd9877ac3b73" />
+
 </p>
 
 <p align="center">
-  <b>A cat that has been customized</b>
+  <b>A cat that has been customized using the pop out customization menu</b>
   <br />
   <br />
-  <img width="823" alt="custom" src="https://github.com/user-attachments/assets/fead6656-7b4f-4639-8657-e9221c138e59" />
-  <img width="833" alt="Screenshot 2025-01-22 214725" src="https://github.com/user-attachments/assets/1b072590-69f2-4de5-95be-45133ceed849" />
+<img width="1004" alt="Screenshot 2025-01-30 140220" src="https://github.com/user-attachments/assets/7f899e53-414e-49fa-88ed-c1a7cf41b341" />
+<img width="1013" alt="Screenshot 2025-01-30 140248" src="https://github.com/user-attachments/assets/4476398f-b7bf-4789-b30c-d888a0654f2b" />
 </p>
+
+<p align="center">
+<b>A couple snippets of the mobile view</b>
+<br />
+<br />
+<img width="297" alt="Screenshot 2025-01-30 140327" src="https://github.com/user-attachments/assets/13bdf71a-6da0-446c-b37e-de665d548219" />
+<img width="301" alt="Screenshot 2025-01-30 140356" src="https://github.com/user-attachments/assets/b2387539-4031-4a9b-b10f-54769d905ae5" />
 
 <p align="right">(<a href="#readme">Back to top</a>)</p>
 
