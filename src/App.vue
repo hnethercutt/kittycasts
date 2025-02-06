@@ -1,4 +1,5 @@
 <script setup>
+import { Analytics } from "@vercel/analytics/react"
 import { ref } from "vue";
 import Search from "./components/Search.vue";
 import WeatherPanel from "./components/WeatherPanel.vue";
@@ -50,6 +51,7 @@ function handleWeatherData(data) {
   </div>
 </div>
 <footer>© 2025 Hannah Nethercutt</footer>
+<Analytics />
 </template>
 
 <style>
