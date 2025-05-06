@@ -15,6 +15,7 @@ function handleWeatherData(data) {
 </script>
 
 <template>
+<Analytics/>
 <header class="header">
   <img class="logo" src="/src/assets/images/kitty.png" />
   <a class="title">kittycaSts</a>
@@ -49,7 +50,6 @@ function handleWeatherData(data) {
   <div class="weather-stuff">
   <WeatherPanel v-bind="weatherData" />
   </div>
-  <Analytics/>
 </div>
 <footer>© 2025 Hannah Nethercutt</footer>
 </template>
