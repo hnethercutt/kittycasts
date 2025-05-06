@@ -4,7 +4,7 @@ import Search from "./components/Search.vue";
 import WeatherPanel from "./components/WeatherPanel.vue";
 import CatBox from "./components/CatBox.vue";
 import ThemeToggler from "./components/ThemeToggler.vue";
-import { Analytics } from '@vercel/analytics';
+import { Analytics } from '@vercel/analytics/vue'
 
 const weatherData = ref(null);
 
@@ -15,6 +15,7 @@ function handleWeatherData(data) {
 </script>
 
 <template>
+<Analytics/>
 <header class="header">
   <img class="logo" src="/src/assets/images/kitty.png" />
   <a class="title">kittycaSts</a>
@@ -51,7 +52,6 @@ function handleWeatherData(data) {
   </div>
 </div>
 <footer>© 2025 Hannah Nethercutt</footer>
-<Analytics/>
 </template>
 
 <style>
