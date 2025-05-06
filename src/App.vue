@@ -4,7 +4,7 @@ import Search from "./components/Search.vue";
 import WeatherPanel from "./components/WeatherPanel.vue";
 import CatBox from "./components/CatBox.vue";
 import ThemeToggler from "./components/ThemeToggler.vue";
-import { Analytics } from '@vercel/analytics';
+import { Analytics } from '@vercel/analytics'
 
 const weatherData = ref(null);
 
@@ -49,9 +49,9 @@ function handleWeatherData(data) {
   <div class="weather-stuff">
   <WeatherPanel v-bind="weatherData" />
   </div>
+  <Analytics/>
 </div>
 <footer>© 2025 Hannah Nethercutt</footer>
-<Analytics/>
 </template>
 
 <style>
