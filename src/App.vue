@@ -4,7 +4,7 @@ import Search from "./components/Search.vue";
 import WeatherPanel from "./components/WeatherPanel.vue";
 import CatBox from "./components/CatBox.vue";
 import ThemeToggler from "./components/ThemeToggler.vue";
-import { Analytics } from '@vercel/analytics'
+import { Analytics } from '@vercel/analytics/vue'
 
 const weatherData = ref(null);
 
